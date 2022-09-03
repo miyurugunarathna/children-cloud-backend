@@ -6,3 +6,4 @@ node_modules/
 .env.development
 build/
 dist/
+package-lock.json
