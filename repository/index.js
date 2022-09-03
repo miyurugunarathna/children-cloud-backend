@@ -5,6 +5,7 @@ import {
   deleteMedicine,
   getMedicines,
 } from "./medicine.repository.js";
+import { saveEvent, updateEvent, deleteEvent, getEvents } from "./event.repository.js";
 
 export {
   saveUser,
@@ -14,4 +15,5 @@ export {
   updateMedicine,
   deleteMedicine,
   getMedicines,
+  saveEvent, updateEvent, deleteEvent, getEvents
 };
