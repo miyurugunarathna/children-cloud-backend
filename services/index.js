@@ -5,6 +5,12 @@ import {
   deleteMedicineService,
   getMedicinesService,
 } from "./medicine.service.js";
+import {
+  saveEventService,
+  updateEventService,
+  deleteEventService,
+  getEventsService,
+} from "./event.service.js";
 
 export {
   save,
@@ -13,4 +19,8 @@ export {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  saveEventService,
+  updateEventService,
+  deleteEventService,
+  getEventsService,
 };
