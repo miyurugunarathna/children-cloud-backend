@@ -6,6 +6,13 @@ import {
   getMedicinesController,
 } from "./medicine.controller.js";
 
+import {
+  saveEventController,
+  updateEventController,
+  deleteEventController,
+  getEventsController,
+} from "./event.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -13,4 +20,8 @@ export {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  saveEventController,
+  updateEventController,
+  deleteEventController,
+  getEventsController,
 };
