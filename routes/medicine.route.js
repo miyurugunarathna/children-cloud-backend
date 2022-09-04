@@ -5,13 +5,12 @@ import {
   deleteMedicineController,
   getMedicinesController,
 } from "../controllers/index.js";
-import { authenticate } from "../middleware/auth.middleware.js";
 
 const medicineRouter = express.Router();
 
-medicineRouter.post("/add", authenticate, saveMedicineController);
+medicineRouter.post("/", saveMedicineController);
 medicineRouter.delete("/:id", deleteMedicineController);
 medicineRouter.put("/:id", updateMedicineController);
-medicineRouter.get("/", authenticate, getMedicinesController);
+medicineRouter.get("/:id", getMedicinesController);
 
 export default medicineRouter;
