@@ -11,6 +11,12 @@ import {
   deleteEvent,
   getEvents,
 } from "./event.repository.js";
+import {
+  saveChild,
+  updateChild,
+  deleteChild,
+  getChilds,
+} from "./child.repository.js";
 
 export {
   saveUser,
@@ -24,4 +30,8 @@ export {
   updateEvent,
   deleteEvent,
   getEvents,
+  saveChild,
+  updateChild,
+  deleteChild,
+  getChilds,
 };
