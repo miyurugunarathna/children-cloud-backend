@@ -20,6 +20,13 @@ import {
   getChildsController,
 } from "./child.controller.js";
 
+import {
+  saveScheduleController,
+  updateScheduleController,
+  deleteScheduleController,
+  getSchedulesController,
+} from "./schedule.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -35,4 +42,8 @@ export {
   updateChildController,
   deleteChildController,
   getChildsController,
+  saveScheduleController,
+  updateScheduleController,
+  deleteScheduleController,
+  getSchedulesController,
 };
