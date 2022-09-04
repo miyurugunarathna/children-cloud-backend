@@ -19,6 +19,13 @@ import {
   getChildsService,
 } from "./child.service.js";
 
+import {
+  saveScheduleService,
+  updateScheduleService,
+  deleteScheduleService,
+  getSchedulesService,
+} from "./schedule.service.js";
+
 export {
   save,
   login,
@@ -34,4 +41,8 @@ export {
   updateChildService,
   deleteChildService,
   getChildsService,
+  saveScheduleService,
+  updateScheduleService,
+  deleteScheduleService,
+  getSchedulesService,
 };
