@@ -9,6 +9,7 @@ import AppError from "../utils/appError.js";
 export const saveScheduleService = async (data) => {
   const {
     childID,
+    childName,
     subject,
     address,
     startingTime,
@@ -19,6 +20,7 @@ export const saveScheduleService = async (data) => {
   try {
     const schedule = await saveSchedule({
       childID,
+      childName,
       subject,
       address,
       startingTime,

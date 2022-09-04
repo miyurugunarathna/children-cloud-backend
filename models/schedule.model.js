@@ -8,6 +8,10 @@ const ScheduleSchema = new Schema(
       type: String,
       required: true,
     },
+    childName: {
+      type: String,
+      required: true,
+    },
     subject: {
       type: String,
       required: true,

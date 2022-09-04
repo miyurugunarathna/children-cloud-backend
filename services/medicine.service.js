@@ -7,10 +7,12 @@ import {
 import AppError from "../utils/appError.js";
 
 export const saveMedicineService = async (data) => {
-  const { childID, medicineName, morning, evening, beforAfterMeal } = data;
+  const { childID, childName, medicineName, morning, evening, beforAfterMeal } =
+    data;
   try {
     const medicine = await saveMedicine({
       childID,
+      childName,
       medicineName,
       morning,
       evening,

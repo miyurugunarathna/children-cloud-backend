@@ -8,6 +8,10 @@ const MedicineSchema = new Schema(
       type: String,
       required: true,
     },
+    childName: {
+      type: String,
+      required: true,
+    },
     medicineName: {
       type: String,
       required: true,
