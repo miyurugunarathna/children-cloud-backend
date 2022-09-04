@@ -18,6 +18,7 @@ import {
   updateChildController,
   deleteChildController,
   getChildsController,
+  getAllChildsController,
 } from "./child.controller.js";
 
 import {
@@ -46,4 +47,5 @@ export {
   updateScheduleController,
   deleteScheduleController,
   getSchedulesController,
+  getAllChildsController,
 };
