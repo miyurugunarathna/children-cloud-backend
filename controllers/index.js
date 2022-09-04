@@ -13,6 +13,13 @@ import {
   getEventsController,
 } from "./event.controller.js";
 
+import {
+  saveChildController,
+  updateChildController,
+  deleteChildController,
+  getChildsController,
+} from "./child.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -24,4 +31,8 @@ export {
   updateEventController,
   deleteEventController,
   getEventsController,
+  saveChildController,
+  updateChildController,
+  deleteChildController,
+  getChildsController,
 };
