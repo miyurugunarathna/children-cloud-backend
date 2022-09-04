@@ -42,3 +42,12 @@ export const getChilds = (id) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getAllChilds = () =>
+  Child.find()
+    .then((childs) => {
+      return Promise.resolve(childs);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });

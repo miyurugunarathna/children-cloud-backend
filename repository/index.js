@@ -16,6 +16,7 @@ import {
   updateChild,
   deleteChild,
   getChilds,
+  getAllChilds,
 } from "./child.repository.js";
 
 import {
@@ -45,4 +46,5 @@ export {
   updateSchedule,
   deleteSchedule,
   getSchedules,
+  getAllChilds,
 };

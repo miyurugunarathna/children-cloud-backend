@@ -3,6 +3,7 @@ import {
   updateChildService,
   deleteChildService,
   getChildsService,
+  getAllChildsService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -38,6 +39,15 @@ export const getChildsController = async (req, res) => {
   try {
     const parentID = req.user._id;
     const childs = await getChildsService(parentID);
+    res.json(Success(childs, "Successfully childrens fetched."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getAllChildsController = async (req, res) => {
+  try {
+    const childs = await getAllChildsService();
     res.json(Success(childs, "Successfully childrens fetched."));
   } catch (err) {
     res.status(err.status).json(err.message);

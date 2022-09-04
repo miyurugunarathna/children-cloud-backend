@@ -17,6 +17,7 @@ import {
   updateChildService,
   deleteChildService,
   getChildsService,
+  getAllChildsService,
 } from "./child.service.js";
 
 import {
@@ -45,4 +46,5 @@ export {
   updateScheduleService,
   deleteScheduleService,
   getSchedulesService,
+  getAllChildsService,
 };

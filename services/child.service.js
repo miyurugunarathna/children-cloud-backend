@@ -3,6 +3,7 @@ import {
   updateChild,
   deleteChild,
   getChilds,
+  getAllChilds,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -46,6 +47,15 @@ export const deleteChildService = async (id) => {
 export const getChildsService = async (id) => {
   try {
     const childs = await getChilds(id);
+    return Promise.resolve(childs);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getAllChildsService = async () => {
+  try {
+    const childs = await getAllChilds();
     return Promise.resolve(childs);
   } catch (err) {
     throw new AppError(err.message, err.status);

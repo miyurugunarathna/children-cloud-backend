@@ -36,6 +36,10 @@ const ScheduleSchema = new Schema(
       type: String,
       required: true,
     },
+    staffID: {
+      type: String,
+      default: "Staff didn't Assigned",
+    },
   },
   { timestamps: true, versionKey: false },
 );
