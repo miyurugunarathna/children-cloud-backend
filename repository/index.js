@@ -18,6 +18,13 @@ import {
   getChilds,
 } from "./child.repository.js";
 
+import {
+  saveSchedule,
+  updateSchedule,
+  deleteSchedule,
+  getSchedules,
+} from "./schedule.repository.js";
+
 export {
   saveUser,
   loginUser,
@@ -34,4 +41,8 @@ export {
   updateChild,
   deleteChild,
   getChilds,
+  saveSchedule,
+  updateSchedule,
+  deleteSchedule,
+  getSchedules,
 };

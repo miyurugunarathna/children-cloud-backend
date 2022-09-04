@@ -24,6 +24,10 @@ const ScheduleSchema = new Schema(
       type: String,
       required: true,
     },
+    day: {
+      type: String,
+      required: true,
+    },
     teacherName: {
       type: String,
       required: true,
