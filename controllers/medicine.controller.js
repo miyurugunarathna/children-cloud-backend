@@ -8,8 +8,7 @@ import Success from "../utils/success.js";
 
 export const saveMedicineController = async (req, res) => {
   try {
-    const childID = req.user._id;
-    const medicine = await saveMedicineService(req.body, childID);
+    const medicine = await saveMedicineService(req.body);
     res.json(Success(medicine, " Successfully Medicine Added."));
   } catch (err) {
     res.status(err.status).json(err.message);
@@ -36,7 +35,7 @@ export const deleteMedicineController = async (req, res) => {
 
 export const getMedicinesController = async (req, res) => {
   try {
-    const childID = req.user._id;
+    const childID = req.params.id;
     const medicines = await getMedicinesService(childID);
     res.json(Success(medicines, "Successfully Fetched Medicines Details."));
   } catch (err) {

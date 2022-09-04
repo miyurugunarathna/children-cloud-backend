@@ -6,8 +6,8 @@ import {
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
-export const saveMedicineService = async (data, childID) => {
-  const { medicineName, morning, evening, beforAfterMeal } = data;
+export const saveMedicineService = async (data) => {
+  const { childID, medicineName, morning, evening, beforAfterMeal } = data;
   try {
     const medicine = await saveMedicine({
       childID,
