@@ -12,6 +12,13 @@ import {
   getEventsService,
 } from "./event.service.js";
 
+import {
+  saveChildService,
+  updateChildService,
+  deleteChildService,
+  getChildsService,
+} from "./child.service.js";
+
 export {
   save,
   login,
@@ -23,4 +30,8 @@ export {
   updateEventService,
   deleteEventService,
   getEventsService,
+  saveChildService,
+  updateChildService,
+  deleteChildService,
+  getChildsService,
 };

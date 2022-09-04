@@ -20,7 +20,7 @@ const ChildSchema = new Schema(
       type: String,
       required: true,
     },
-    dateOfBirt: {
+    dateOfBirth: {
       type: Date,
       required: true,
     },
