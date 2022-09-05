@@ -27,6 +27,14 @@ import {
   getSchedulesService,
 } from "./schedule.service.js";
 
+import {
+  saveAssignedStaffService,
+  updateAssignedStaffDataService,
+  deleteAssignedStaffService,
+  getAllAssignedStaffService,
+  getPendingAssignedStaffService,
+} from "./assignStaff.service.js";
+
 export {
   save,
   login,
@@ -47,4 +55,9 @@ export {
   deleteScheduleService,
   getSchedulesService,
   getAllChildsService,
+  saveAssignedStaffService,
+  updateAssignedStaffDataService,
+  deleteAssignedStaffService,
+  getAllAssignedStaffService,
+  getPendingAssignedStaffService,
 };
