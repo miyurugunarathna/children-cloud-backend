@@ -28,6 +28,14 @@ import {
   getSchedulesController,
 } from "./schedule.controller.js";
 
+import {
+  saveAssignStaffController,
+  updateAssignStaffController,
+  deleteAssignStaffController,
+  getAllAssignedStaffController,
+  getPendingAssignedStaffController,
+} from "./assignStaff.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -48,4 +56,9 @@ export {
   deleteScheduleController,
   getSchedulesController,
   getAllChildsController,
+  saveAssignStaffController,
+  updateAssignStaffController,
+  deleteAssignStaffController,
+  getAllAssignedStaffController,
+  getPendingAssignedStaffController,
 };
