@@ -1,9 +1,15 @@
+import { Medicine } from "../models/medicine.model.js";
+import { Schedule } from "../models/schedule.model.js";
 import {
   saveAssignedStaff,
   deleteAssignedStaff,
   updateAssignStaffData,
   getAll,
   getPendingStaff,
+  updateStaff,
+  updateStaffSchedule,
+  getMedicines,
+  getSchedules,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -17,6 +23,18 @@ export const saveAssignedStaffService = async (data) => {
       staff,
       status,
     });
+    await getMedicines(childID).then((medicines) => {
+      medicines.forEach((medicine) => {
+        updateStaff(medicine._id, staff);
+      });
+    });
+
+    await getSchedules(childID).then((schedules) => {
+      schedules.forEach((schedule) => {
+        updateStaffSchedule(schedule._id, staff);
+      });
+    });
+
     return Promise.resolve(assignedStaff);
   } catch (err) {
     throw new AppError(err.message, err.status);
