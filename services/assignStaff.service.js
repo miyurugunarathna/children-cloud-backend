@@ -1,5 +1,3 @@
-import { Medicine } from "../models/medicine.model.js";
-import { Schedule } from "../models/schedule.model.js";
 import {
   saveAssignedStaff,
   deleteAssignedStaff,
