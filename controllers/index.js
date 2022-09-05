@@ -6,6 +6,14 @@ import {
   getMedicinesController,
 } from "./medicine.controller.js";
 
+import {
+  saveEmployeeController,
+  updateEmployeeController,
+  deleteEmployeeController,
+  getEmployeeController,
+  getAllEmployeeController,
+} from "./employeeReg.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -13,4 +21,9 @@ export {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  saveEmployeeController,
+  updateEmployeeController,
+  deleteEmployeeController,
+  getEmployeeController,
+  getAllEmployeeController,
 };

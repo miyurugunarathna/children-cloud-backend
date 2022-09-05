@@ -6,6 +6,20 @@ import {
   getMedicines,
 } from "./medicine.repository.js";
 
+import {
+  saveEmployee,
+  updateEmployee,
+  deleteEmployee,
+  getEmployee,
+  getAllEmployee,
+} from "./employeeReg.repository.js";
+
+import {
+  saveAttendance,
+  getAttendance,
+  getAllAttendance,
+} from "./attendance.repository.js";
+
 export {
   saveUser,
   loginUser,
@@ -14,4 +28,12 @@ export {
   updateMedicine,
   deleteMedicine,
   getMedicines,
+  saveEmployee,
+  updateEmployee,
+  deleteEmployee,
+  getEmployee,
+  getAllEmployee,
+  saveAttendance,
+  getAttendance,
+  getAllAttendance,
 };

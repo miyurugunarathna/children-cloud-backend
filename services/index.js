@@ -6,6 +6,14 @@ import {
   getMedicinesService,
 } from "./medicine.service.js";
 
+import {
+  saveEmployeeService,
+  updateEmployeeService,
+  deleteEmployeeService,
+  getEmployeesService,
+  getAllEmployeeService,
+} from "./employeeReg.service.js";
+
 export {
   save,
   login,
@@ -13,4 +21,9 @@ export {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  saveEmployeeService,
+  updateEmployeeService,
+  deleteEmployeeService,
+  getEmployeesService,
+  getAllEmployeeService,
 };
