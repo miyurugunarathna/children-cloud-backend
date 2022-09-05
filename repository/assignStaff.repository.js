@@ -22,6 +22,18 @@ export const updateAssignedStaffStatus = (id, status) =>
       throw new AppError("Internal server error.", 500);
     });
 
+export const updateAssignStaffData = (id, data) =>
+  AssignStaff.findByIdAndUpdate(id, data, { new: true })
+    .then((assignedStaff) => {
+      if (!assignedStaff) {
+        throw new AppError("Data Not Found", 404);
+      }
+      return Promise.resolve(assignedStaff);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
 export const updateAssignedStaff = (id, staff) =>
   AssignStaff.findByIdAndUpdate(id, { staff }, { new: true })
     .then((updatedStaff) => {

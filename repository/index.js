@@ -27,6 +27,7 @@ import {
   getOtherStaffs,
   getPendingStaff,
   updateAssignedStaffStatus,
+  updateAssignStaffData,
 } from "./assignStaff.repository.js";
 
 import {
@@ -64,4 +65,5 @@ export {
   getOtherStaffs,
   getPendingStaff,
   updateAssignedStaffStatus,
+  updateAssignStaffData,
 };
