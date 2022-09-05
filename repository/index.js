@@ -4,6 +4,7 @@ import {
   updateMedicine,
   deleteMedicine,
   getMedicines,
+  updateStaff,
 } from "./medicine.repository.js";
 import {
   saveEvent,
@@ -66,4 +67,5 @@ export {
   getPendingStaff,
   updateAssignedStaffStatus,
   updateAssignStaffData,
+  updateStaff,
 };
