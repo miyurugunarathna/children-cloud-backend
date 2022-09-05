@@ -36,6 +36,7 @@ import {
   updateSchedule,
   deleteSchedule,
   getSchedules,
+  updateStaffSchedule,
 } from "./schedule.repository.js";
 
 export {
@@ -68,4 +69,5 @@ export {
   updateAssignedStaffStatus,
   updateAssignStaffData,
   updateStaff,
+  updateStaffSchedule,
 };
