@@ -20,6 +20,16 @@ import {
 } from "./child.repository.js";
 
 import {
+  saveAssignedStaff,
+  updateAssignedStaff,
+  deleteAssignedStaff,
+  getAll,
+  getOtherStaffs,
+  getPendingStaff,
+  updateAssignedStaffStatus,
+} from "./assignStaff.repository.js";
+
+import {
   saveSchedule,
   updateSchedule,
   deleteSchedule,
@@ -47,4 +57,11 @@ export {
   deleteSchedule,
   getSchedules,
   getAllChilds,
+  saveAssignedStaff,
+  updateAssignedStaff,
+  deleteAssignedStaff,
+  getAll,
+  getOtherStaffs,
+  getPendingStaff,
+  updateAssignedStaffStatus,
 };

@@ -3,5 +3,6 @@ import { Event } from "./event.model.js";
 import { Medicine } from "./medicine.model.js";
 import { Child } from "./child.model.js";
 import { Schedule } from "./schedule.model.js";
+import { AssignStaff } from "./assignStaff.model.js";
 
-export { User, Event, Medicine, Child, Schedule };
+export { User, Event, Medicine, Child, Schedule, AssignStaff };
