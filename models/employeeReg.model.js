@@ -35,6 +35,7 @@ const empSchema = new Schema({
   image: {
     type: String,
     required: false,
+    data: Buffer,
   },
   createAt: {
     type: Date,

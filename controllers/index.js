@@ -14,6 +14,12 @@ import {
   getAllEmployeeController,
 } from "./employeeReg.controller.js";
 
+import {
+  saveAttendanceController,
+  getAllAttendanceController,
+  getAttendanceController,
+} from "./attendance.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -26,4 +32,7 @@ export {
   deleteEmployeeController,
   getEmployeeController,
   getAllEmployeeController,
+  saveAttendanceController,
+  getAllAttendanceController,
+  getAttendanceController,
 };

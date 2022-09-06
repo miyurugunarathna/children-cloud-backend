@@ -14,6 +14,12 @@ import {
   getAllEmployeeService,
 } from "./employeeReg.service.js";
 
+import {
+  saveAttendanceService,
+  getAllAttendanceService,
+  getAttendanceService,
+} from "./attendance.service.js";
+
 export {
   save,
   login,
@@ -26,4 +32,7 @@ export {
   deleteEmployeeService,
   getEmployeesService,
   getAllEmployeeService,
+  saveAttendanceService,
+  getAllAttendanceService,
+  getAttendanceService,
 };
