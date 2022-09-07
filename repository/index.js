@@ -6,6 +6,14 @@ import {
   getMedicines,
 } from "./medicine.repository.js";
 
+import {
+  savePayment,
+  getPayment,
+  getPaymentById,
+  updatePayment,
+  deletePayment,
+} from "./payment.repository.js";
+
 export {
   saveUser,
   loginUser,
@@ -14,4 +22,9 @@ export {
   updateMedicine,
   deleteMedicine,
   getMedicines,
+  savePayment,
+  getPayment,
+  getPaymentById,
+  updatePayment,
+  deletePayment,
 };

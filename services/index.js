@@ -6,6 +6,14 @@ import {
   getMedicinesService,
 } from "./medicine.service.js";
 
+import {
+  savePaymentService,
+  getPaymentByIdService,
+  getPaymentService,
+  updatePaymentService,
+  deletePaymentService,
+} from "./payment.service.js";
+
 export {
   save,
   login,
@@ -13,4 +21,9 @@ export {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  savePaymentService,
+  getPaymentByIdService,
+  getPaymentService,
+  updatePaymentService,
+  deletePaymentService,
 };

@@ -6,6 +6,12 @@ import {
   getMedicinesController,
 } from "./medicine.controller.js";
 
+import {
+  savePaymentController,
+  getPaymentController,
+  getPaymentByIdController,
+} from "./payment.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -13,4 +19,7 @@ export {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  savePaymentController,
+  getPaymentController,
+  getPaymentByIdController,
 };
