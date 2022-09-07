@@ -8,14 +8,15 @@ import {
 import AppError from "../utils/appError.js";
 
 export const savePaymentService = async (data) => {
-  const { paymentName, paymentType, paymentAmount, billId, paymentStatus } = data;
+  const { paymentName, paymentType, paymentAmount, billId, paymentStatus } =
+    data;
   try {
     const payment = await savePayment({
-      paymentName, 
-      paymentType, 
-      paymentAmount, 
-      billId, 
-      paymentStatus
+      paymentName,
+      paymentType,
+      paymentAmount,
+      billId,
+      paymentStatus,
     });
     return Promise.resolve(payment);
   } catch (err) {

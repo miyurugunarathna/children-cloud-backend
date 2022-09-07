@@ -5,7 +5,7 @@ import {
   getPaymentByIdController,
 } from "../controllers/index.js";
 
-import { authenticate } from "../middleware/auth.middleware.js";
+// import { authenticate } from "../middleware/auth.middleware.js";
 
 const paymentRouter = express.Router();
 

@@ -51,5 +51,3 @@ export const deletePayment = (id) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
-
-
