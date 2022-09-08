@@ -22,9 +22,13 @@ export const getPayment = () =>
 export const getPaymentById = (id) =>
   Payment.findById(id)
     .then((payment) => {
+      if (!payment) {
+        throw new AppError("Payment Details not Found", 404);
+      }
       return Promise.resolve(payment);
     })
     .catch(() => {
+      console.log(id);
       throw new AppError("Internal server error.", 500);
     });
 

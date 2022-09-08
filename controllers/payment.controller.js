@@ -27,7 +27,7 @@ export const getPaymentController = async (req, res) => {
 
 export const getPaymentByIdController = async (req, res) => {
   try {
-    const paymentId = req.id;
+    const paymentId = req.params.id;
     const payment = await getPaymentByIdService(paymentId);
     res.json(Success(payment, "Fetched Payment Details"));
   } catch (err) {
