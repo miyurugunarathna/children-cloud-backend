@@ -20,7 +20,7 @@ import {
   getBillById,
   updateBill,
   deleteBill,
-} from "./bill.repository";
+} from "./bill.repository.js";
 
 export {
   saveUser,

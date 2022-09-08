@@ -8,14 +8,13 @@ import {
 import AppError from "../utils/appError.js";
 
 export const saveBillService = async (data) => {
-  const { billName, childId, item, status } =
-    data;
+  const { billName, childId, item, status } = data;
   try {
     const bill = await saveBill({
-      billName, 
-      childId, 
-      item, 
-      status
+      billName,
+      childId,
+      item,
+      status,
     });
     return Promise.resolve(bill);
   } catch (err) {

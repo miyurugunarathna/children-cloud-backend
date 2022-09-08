@@ -22,7 +22,6 @@ import {
   deleteBillService,
 } from "./bill.service.js";
 
-
 export {
   save,
   login,
