@@ -44,7 +44,7 @@ export const updatePaymentController = async (req, res) => {
   }
 };
 
-export const deleteMedicineController = async (req, res) => {
+export const deletePaymentController = async (req, res) => {
   try {
     const payment = await deletePaymentService(req.params.id);
     res.json(Success(payment, "Successfully Payment Detail Deleted."));

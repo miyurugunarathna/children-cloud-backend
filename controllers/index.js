@@ -10,6 +10,8 @@ import {
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
+  updatePaymentController,
+  deletePaymentController,
 } from "./payment.controller.js";
 
 export {
@@ -22,4 +24,6 @@ export {
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
+  updatePaymentController,
+  deletePaymentController,
 };
