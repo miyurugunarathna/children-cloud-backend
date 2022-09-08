@@ -20,7 +20,7 @@ export const getPayment = () =>
     });
 
 export const getPaymentById = (id) =>
-  Payment.find({ id })
+  Payment.findById(id)
     .then((payment) => {
       return Promise.resolve(payment);
     })
