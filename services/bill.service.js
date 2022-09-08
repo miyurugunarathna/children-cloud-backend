@@ -9,7 +9,7 @@ import {
 import AppError from "../utils/appError.js";
 
 export const saveBillService = async (data) => {
-  const { billName, childId, item,totalBill, status } = data;
+  const { billName, childId, item, totalBill, status } = data;
   try {
     const bill = await saveBill({
       billName,
@@ -50,7 +50,6 @@ export const getBillByIdService = async (id) => {
     throw new AppError(err.message, err.status);
   }
 };
-
 
 export const updateBillService = async (id, data) => {
   try {

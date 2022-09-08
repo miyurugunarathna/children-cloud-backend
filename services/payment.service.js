@@ -4,7 +4,7 @@ import {
   getPaymentById,
   updatePayment,
   deletePayment,
-  getPaymentByBillId
+  getPaymentByBillId,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
