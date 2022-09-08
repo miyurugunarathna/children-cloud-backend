@@ -14,6 +14,14 @@ import {
   deletePayment,
 } from "./payment.repository.js";
 
+import {
+  saveBill,
+  getBill,
+  getBillById,
+  updateBill,
+  deleteBill,
+} from "./bill.repository";
+
 export {
   saveUser,
   loginUser,
@@ -27,4 +35,9 @@ export {
   getPaymentById,
   updatePayment,
   deletePayment,
+  saveBill,
+  getBill,
+  getBillById,
+  updateBill,
+  deleteBill,
 };

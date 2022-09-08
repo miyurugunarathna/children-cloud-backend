@@ -4,11 +4,11 @@ const { Schema } = mongoose;
 
 const BillSchama = new Schema(
   {
-    BillName: {
+    billName: {
       type: String,
       required: true,
     },
-    ChildId: {
+    childId: {
       type: String,
       required: true,
     },

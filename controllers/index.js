@@ -14,6 +14,14 @@ import {
   deletePaymentController,
 } from "./payment.controller.js";
 
+import {
+  saveBillController,
+  getBillController,
+  getBillByIdController,
+  updateBillController,
+  deleteBillController,
+} from "./bill.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -26,4 +34,9 @@ export {
   getPaymentByIdController,
   updatePaymentController,
   deletePaymentController,
+  saveBillController,
+  getBillController,
+  getBillByIdController,
+  updateBillController,
+  deleteBillController,
 };

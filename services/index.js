@@ -14,6 +14,15 @@ import {
   deletePaymentService,
 } from "./payment.service.js";
 
+import {
+  saveBillService,
+  getBillService,
+  getBillByIdService,
+  updateBillService,
+  deleteBillService,
+} from "./bill.service.js";
+
+
 export {
   save,
   login,
@@ -26,4 +35,9 @@ export {
   getPaymentService,
   updatePaymentService,
   deletePaymentService,
+  saveBillService,
+  getBillService,
+  getBillByIdService,
+  updateBillService,
+  deleteBillService,
 };
