@@ -6,8 +6,8 @@ export const saveBill = (data) =>
     .then((bill) => {
       return Promise.resolve(bill);
     })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
 export const getBill = () =>
@@ -15,8 +15,8 @@ export const getBill = () =>
     .then((bill) => {
       return Promise.resolve(bill);
     })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
 export const getBillById = (id) =>
@@ -27,8 +27,8 @@ export const getBillById = (id) =>
       }
       return Promise.resolve(bill);
     })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
 export const updateBill = (id, data) =>
@@ -39,8 +39,8 @@ export const updateBill = (id, data) =>
       }
       return Promise.resolve(bill);
     })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
 export const deleteBill = (id) =>
@@ -51,6 +51,6 @@ export const deleteBill = (id) =>
       }
       return Promise.resolve(bill);
     })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
     });
