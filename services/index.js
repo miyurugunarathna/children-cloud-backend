@@ -24,6 +24,15 @@ import {
   getBillByChildIdService,
 } from "./bill.service.js";
 
+import {
+  saveItemService,
+  getItemService,
+  getItemByChildIdService,
+  getItemByIdService,
+  updateItemService,
+  deleteItemService,
+} from "./item.service.js";
+
 export {
   save,
   login,
@@ -43,4 +52,10 @@ export {
   updateBillService,
   deleteBillService,
   getBillByChildIdService,
+  saveItemService,
+  getItemService,
+  getItemByChildIdService,
+  getItemByIdService,
+  updateItemService,
+  deleteItemService,
 };

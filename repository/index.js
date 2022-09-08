@@ -24,6 +24,15 @@ import {
   getBillByChildId,
 } from "./bill.repository.js";
 
+import {
+  saveItem,
+  getItem,
+  getItemById,
+  updateItem,
+  deleteItem,
+  getItemByChildId,
+} from "./item.repository.js";
+
 export {
   saveUser,
   loginUser,
@@ -44,4 +53,10 @@ export {
   updateBill,
   deleteBill,
   getBillByChildId,
+  saveItem,
+  getItem,
+  getItemById,
+  updateItem,
+  deleteItem,
+  getItemByChildId,
 };

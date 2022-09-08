@@ -24,6 +24,15 @@ import {
   getBillByChildIdController,
 } from "./bill.controller.js";
 
+import {
+  saveItemController,
+  getItemController,
+  getItemByIdController,
+  updateItemController,
+  deleteItemController,
+  getItemByChildIdController,
+} from "./item.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -43,4 +52,10 @@ export {
   updateBillController,
   deleteBillController,
   getBillByChildIdController,
+  saveItemController,
+  getItemController,
+  getItemByIdController,
+  updateItemController,
+  deleteItemController,
+  getItemByChildIdController,
 };

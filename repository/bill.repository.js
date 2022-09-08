@@ -32,7 +32,7 @@ export const getBillById = (id) =>
     });
 
 export const getBillByChildId = (id) =>
-  Bill.find({ chidId: id })
+  Bill.find({ childId: id })
     .then((bill) => {
       if (!bill) {
         throw new AppError("Bill Details not Found", 404);
