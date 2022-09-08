@@ -4,6 +4,7 @@ import {
   getBillByIdService,
   updateBillService,
   deleteBillService,
+  getBillByChildIdService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -29,6 +30,16 @@ export const getBillByIdController = async (req, res) => {
   try {
     const billId = req.params.id;
     const bill = await getBillByIdService(billId);
+    res.json(Success(bill, "Fetched Bill Details"));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getBillByChildIdController = async (req, res) => {
+  try {
+    const childId = req.params.id;
+    const bill = await getBillByChildIdService(childId);
     res.json(Success(bill, "Fetched Bill Details"));
   } catch (err) {
     res.status(err.status).json(err.message);

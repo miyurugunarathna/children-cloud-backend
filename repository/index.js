@@ -12,6 +12,7 @@ import {
   getPaymentById,
   updatePayment,
   deletePayment,
+  getPaymentByBillId,
 } from "./payment.repository.js";
 
 import {
@@ -20,6 +21,7 @@ import {
   getBillById,
   updateBill,
   deleteBill,
+  getBillByChildId,
 } from "./bill.repository.js";
 
 export {
@@ -35,9 +37,11 @@ export {
   getPaymentById,
   updatePayment,
   deletePayment,
+  getPaymentByBillId,
   saveBill,
   getBill,
   getBillById,
   updateBill,
   deleteBill,
+  getBillByChildId,
 };

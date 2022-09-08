@@ -31,6 +31,18 @@ export const getPaymentById = (id) =>
       throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
+export const getPaymentByBillId = (id) =>
+  Payment.find({ billId: id })
+    .then((payment) => {
+      if (!payment) {
+        throw new AppError("Payment Details not Found", 404);
+      }
+      return Promise.resolve(payment);
+    })
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
+    });
+
 export const updatePayment = (id, data) =>
   Payment.findByIdAndUpdate(id, data, { new: true })
     .then((payment) => {

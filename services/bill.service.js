@@ -4,16 +4,18 @@ import {
   getBillById,
   updateBill,
   deleteBill,
+  getBillByChildId,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
 export const saveBillService = async (data) => {
-  const { billName, childId, item, status } = data;
+  const { billName, childId, item,totalBill, status } = data;
   try {
     const bill = await saveBill({
       billName,
       childId,
       item,
+      totalBill,
       status,
     });
     return Promise.resolve(bill);
@@ -31,6 +33,15 @@ export const getBillService = async () => {
   }
 };
 
+export const getBillByChildIdService = async (id) => {
+  try {
+    const bill = await getBillByChildId(id);
+    return Promise.resolve(bill);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
 export const getBillByIdService = async (id) => {
   try {
     const bill = await getBillById(id);
@@ -39,6 +50,7 @@ export const getBillByIdService = async (id) => {
     throw new AppError(err.message, err.status);
   }
 };
+
 
 export const updateBillService = async (id, data) => {
   try {

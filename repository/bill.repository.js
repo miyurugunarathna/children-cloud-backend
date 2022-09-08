@@ -31,6 +31,18 @@ export const getBillById = (id) =>
       throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
+export const getBillByChildId = (id) =>
+  Bill.find({ chidId: id })
+    .then((bill) => {
+      if (!bill) {
+        throw new AppError("Bill Details not Found", 404);
+      }
+      return Promise.resolve(bill);
+    })
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
+    });
+
 export const updateBill = (id, data) =>
   Bill.findByIdAndUpdate(id, data, { new: true })
     .then((bill) => {

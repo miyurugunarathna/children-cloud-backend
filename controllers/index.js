@@ -12,6 +12,7 @@ import {
   getPaymentByIdController,
   updatePaymentController,
   deletePaymentController,
+  getPaymentByBillIdController,
 } from "./payment.controller.js";
 
 import {
@@ -20,6 +21,7 @@ import {
   getBillByIdController,
   updateBillController,
   deleteBillController,
+  getBillByChildIdController,
 } from "./bill.controller.js";
 
 export {
@@ -32,6 +34,7 @@ export {
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
+  getPaymentByBillIdController,
   updatePaymentController,
   deletePaymentController,
   saveBillController,
@@ -39,4 +42,5 @@ export {
   getBillByIdController,
   updateBillController,
   deleteBillController,
+  getBillByChildIdController,
 };

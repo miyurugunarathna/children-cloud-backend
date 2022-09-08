@@ -12,6 +12,7 @@ import {
   getPaymentService,
   updatePaymentService,
   deletePaymentService,
+  getPaymentByBillIdService,
 } from "./payment.service.js";
 
 import {
@@ -20,6 +21,7 @@ import {
   getBillByIdService,
   updateBillService,
   deleteBillService,
+  getBillByChildIdService,
 } from "./bill.service.js";
 
 export {
@@ -34,9 +36,11 @@ export {
   getPaymentService,
   updatePaymentService,
   deletePaymentService,
+  getPaymentByBillIdService,
   saveBillService,
   getBillService,
   getBillByIdService,
   updateBillService,
   deleteBillService,
+  getBillByChildIdService,
 };

@@ -16,6 +16,10 @@ const BillSchama = new Schema(
       type: Array,
       required: false,
     },
+    totalBill: {
+      type: Number,
+      required: true,
+    },
     status: {
       type: Boolean,
       required: true,

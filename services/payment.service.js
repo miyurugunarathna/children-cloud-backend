@@ -4,6 +4,7 @@ import {
   getPaymentById,
   updatePayment,
   deletePayment,
+  getPaymentByBillId
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -36,6 +37,15 @@ export const getPaymentService = async () => {
 export const getPaymentByIdService = async (id) => {
   try {
     const payment = await getPaymentById(id);
+    return Promise.resolve(payment);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getPaymentByBillIdService = async (id) => {
+  try {
+    const payment = await getPaymentByBillId(id);
     return Promise.resolve(payment);
   } catch (err) {
     throw new AppError(err.message, err.status);

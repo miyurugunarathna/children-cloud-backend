@@ -4,6 +4,7 @@ import {
   getPaymentService,
   updatePaymentService,
   deletePaymentService,
+  getPaymentByBillIdService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -29,6 +30,16 @@ export const getPaymentByIdController = async (req, res) => {
   try {
     const paymentId = req.params.id;
     const payment = await getPaymentByIdService(paymentId);
+    res.json(Success(payment, "Fetched Payment Details"));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getPaymentByBillIdController = async (req, res) => {
+  try {
+    const billId = req.params.id;
+    const payment = await getPaymentByBillIdService(billId);
     res.json(Success(payment, "Fetched Payment Details"));
   } catch (err) {
     res.status(err.status).json(err.message);
