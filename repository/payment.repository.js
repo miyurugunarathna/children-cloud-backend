@@ -28,7 +28,6 @@ export const getPaymentById = (id) =>
       return Promise.resolve(payment);
     })
     .catch(() => {
-      console.log(id);
       throw new AppError("Internal server error.", 500);
     });
 
