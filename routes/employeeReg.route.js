@@ -10,10 +10,10 @@ import {
 
 const EmployeeRouter = express.Router();
 
-EmployeeRouter.route("/:id").get(getEmployeeController);
-EmployeeRouter.route("/add").post(saveEmployeeController);
-EmployeeRouter.route("/").get(getAllEmployeeController);
-EmployeeRouter.route("/:id").delete(deleteEmployeeController);
-EmployeeRouter.route(":/id").put(updateEmployeeController);
+EmployeeRouter.post("/add", saveEmployeeController);
+EmployeeRouter.get("/", getAllEmployeeController);
+EmployeeRouter.get("/:id", getEmployeeController);
+EmployeeRouter.put("/:id", updateEmployeeController);
+EmployeeRouter.delete("/:id", deleteEmployeeController);
 
 export default EmployeeRouter;

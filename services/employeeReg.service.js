@@ -8,8 +8,18 @@ import {
 
 import AppError from "../utils/appError.js";
 
-export const saveEmployeeService = async (data, empID) => {
-  const { fullName, address, nic, phoneNo, dob, recruitDate, image } = data;
+export const saveEmployeeService = async (data) => {
+  const {
+    empID,
+    fullName,
+    address,
+    nic,
+    phoneNo,
+    dob,
+    recruitDate,
+    image,
+    type,
+  } = data;
   try {
     const employee = await saveEmployee({
       empID,
@@ -20,6 +30,7 @@ export const saveEmployeeService = async (data, empID) => {
       dob,
       recruitDate,
       image,
+      type,
     });
     return Promise.resolve(employee);
   } catch (err) {

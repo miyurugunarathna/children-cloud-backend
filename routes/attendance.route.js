@@ -8,8 +8,8 @@ import {
 
 const AttendanceRoute = Express.Router();
 
-AttendanceRoute.route("/save").post(saveAttendanceController);
-AttendanceRoute.route("/:Date").get(getAttendanceController);
-AttendanceRoute.route("/").get(getAllAttendanceController);
+AttendanceRoute.post("/save", saveAttendanceController);
+AttendanceRoute.get("/:Date", getAttendanceController);
+AttendanceRoute.get("/", getAllAttendanceController);
 
 export default AttendanceRoute;

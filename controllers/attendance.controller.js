@@ -8,8 +8,7 @@ import Success from "../utils/success.js";
 
 export const saveAttendanceController = async (req, res) => {
   try {
-    const Date = req.user._id;
-    const attendance = await saveAttendance(req.body, Date);
+    const attendance = await saveAttendance(req.body);
     res.json(Success(attendance, " Successfully Employee Saved"));
   } catch (err) {
     res.status(err.status).json(err.message);

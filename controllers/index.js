@@ -20,6 +20,33 @@ import {
   getAttendanceController,
 } from "./attendance.controller.js";
 
+import {
+  savePaymentController,
+  getPaymentController,
+  getPaymentByIdController,
+  updatePaymentController,
+  deletePaymentController,
+  getPaymentByBillIdController,
+} from "./payment.controller.js";
+
+import {
+  saveBillController,
+  getBillController,
+  getBillByIdController,
+  updateBillController,
+  deleteBillController,
+  getBillByChildIdController,
+} from "./bill.controller.js";
+
+import {
+  saveItemController,
+  getItemController,
+  getItemByIdController,
+  updateItemController,
+  deleteItemController,
+  getItemByChildIdController,
+} from "./item.controller.js";
+
 export {
   saveUser,
   loginUser,
@@ -35,4 +62,22 @@ export {
   saveAttendanceController,
   getAllAttendanceController,
   getAttendanceController,
+  savePaymentController,
+  getPaymentController,
+  getPaymentByIdController,
+  getPaymentByBillIdController,
+  updatePaymentController,
+  deletePaymentController,
+  saveBillController,
+  getBillController,
+  getBillByIdController,
+  updateBillController,
+  deleteBillController,
+  getBillByChildIdController,
+  saveItemController,
+  getItemController,
+  getItemByIdController,
+  updateItemController,
+  deleteItemController,
+  getItemByChildIdController,
 };
