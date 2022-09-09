@@ -1,4 +1,3 @@
-import { saveUser, loginUser, getUser } from "./user.repository.js";
 import {
   saveMedicine,
   updateMedicine,
@@ -34,9 +33,6 @@ import {
 } from "./item.repository.js";
 
 export {
-  saveUser,
-  loginUser,
-  getUser,
   saveMedicine,
   updateMedicine,
   deleteMedicine,
@@ -60,3 +56,4 @@ export {
   deleteItem,
   getItemByChildId,
 };
+export * from "./user.repository.js";

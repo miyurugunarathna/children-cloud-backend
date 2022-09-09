@@ -1,4 +1,3 @@
-import { saveUser, loginUser } from "./user.controller.js";
 import {
   saveMedicineController,
   updateMedicineController,
@@ -34,8 +33,6 @@ import {
 } from "./item.controller.js";
 
 export {
-  saveUser,
-  loginUser,
   saveMedicineController,
   updateMedicineController,
   deleteMedicineController,
@@ -59,3 +56,4 @@ export {
   deleteItemController,
   getItemByChildIdController,
 };
+export * from "./user.controller.js";

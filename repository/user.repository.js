@@ -20,7 +20,25 @@ export const loginUser = (userName) =>
     });
 
 export const getUser = (data) =>
-  User.findOne(data)
+  User.findById(data)
+    .then((user) => {
+      return Promise.resolve(user);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const updateUser = (userId, data) =>
+  User.findByIdAndUpdate(userId, data, { new: true })
+    .then((user) => {
+      return Promise.resolve(user);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const deleteUser = (data) =>
+  User.findByIdAndRemove(data)
     .then((user) => {
       return Promise.resolve(user);
     })

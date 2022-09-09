@@ -11,7 +11,9 @@ const UserSchema = new Schema(
     password: String,
     role: String,
   },
-  { versionKey: false },
+  {
+    timestamps: true,
+  },
 );
 
 export const User = mongoose.model("User", UserSchema);

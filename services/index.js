@@ -1,4 +1,3 @@
-import { save, login } from "./user.service.js";
 import {
   saveMedicineService,
   updateMedicineService,
@@ -34,8 +33,6 @@ import {
 } from "./item.service.js";
 
 export {
-  save,
-  login,
   saveMedicineService,
   updateMedicineService,
   deleteMedicineService,
@@ -59,3 +56,4 @@ export {
   updateItemService,
   deleteItemService,
 };
+export * from "./user.service.js";
