@@ -6,3 +6,8 @@ import { Schedule } from "./schedule.model.js";
 import { AssignStaff } from "./assignStaff.model.js";
 
 export { User, Event, Medicine, Child, Schedule, AssignStaff };
+import { Payment } from "./payment.model.js";
+import { Bill } from "./bill.model.js";
+import { Item } from "./item.model.js";
+
+export { User, Event, Medicine, Payment, Bill, Item };
