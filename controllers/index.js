@@ -6,6 +6,26 @@ import {
 } from "./medicine.controller.js";
 
 import {
+  saveEventController,
+  updateEventController,
+  deleteEventController,
+  getEventsController,
+} from "./event.controller.js";
+
+import {
+  saveChildController,
+  updateChildController,
+  deleteChildController,
+  getChildsController,
+  getAllChildsController,
+} from "./child.controller.js";
+
+import {
+  saveScheduleController,
+  updateScheduleController,
+  deleteScheduleController,
+  getSchedulesController,
+} from "./schedule.controller.js";
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
@@ -37,6 +57,19 @@ export {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  saveEventController,
+  updateEventController,
+  deleteEventController,
+  getEventsController,
+  saveChildController,
+  updateChildController,
+  deleteChildController,
+  getChildsController,
+  saveScheduleController,
+  updateScheduleController,
+  deleteScheduleController,
+  getSchedulesController,
+  getAllChildsController,
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,

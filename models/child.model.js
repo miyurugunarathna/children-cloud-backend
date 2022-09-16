@@ -2,38 +2,42 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const MedicineSchema = new Schema(
+const ChildSchema = new Schema(
   {
-    childID: {
+    parentID: {
       type: String,
       required: true,
     },
-    childName: {
+    name: {
       type: String,
       required: true,
     },
-    medicineName: {
+    age: {
+      type: Number,
+      required: true,
+    },
+    gender: {
       type: String,
       required: true,
     },
-    morning: {
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
+    image: {
       type: String,
       required: true,
     },
-    evening: {
+    school: {
       type: String,
       required: true,
     },
-    beforAfterMeal: {
+    hobby: {
       type: String,
       required: true,
-    },
-    staffID: {
-      type: String,
-      default: "Staff didn't Assigned",
     },
   },
   { timestamps: true, versionKey: false },
 );
 
-export const Medicine = mongoose.model("Medicine", MedicineSchema);
+export const Child = mongoose.model("Child", ChildSchema);
