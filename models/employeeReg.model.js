@@ -39,7 +39,7 @@ const empSchema = new Schema(
       data: Buffer,
     },
     type: {
-      type: Array,
+      type: String,
     },
   },
   { timestamps: true, versionKey: false },

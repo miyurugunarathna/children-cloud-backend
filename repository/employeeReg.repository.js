@@ -35,7 +35,7 @@ export const deleteEmployee = (id) =>
     });
 
 export const getEmployee = (id) =>
-  Employee.find({ empID: id })
+  Employee.findById(id)
     .then((employee) => {
       return Promise.resolve(employee);
     })
