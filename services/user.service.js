@@ -1,6 +1,12 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { saveUser, loginUser, getUser } from "../repository/index.js";
+import {
+  saveUser,
+  loginUser,
+  getUser,
+  updateUser,
+  deleteUser,
+} from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
 export const save = async (data) => {
@@ -37,6 +43,32 @@ export const login = async (data) => {
         return Promise.resolve({ token });
       }
     }
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getOne = async (userId) => {
+  try {
+    const user = await getUser(userId);
+    return Promise.resolve(user);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const update = async (userId, data) => {
+  try {
+    const user = await updateUser(userId, data);
+    return Promise.resolve(user);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const remove = async (userId) => {
+  try {
+    await deleteUser(userId).then(() => Promise.resolve(userId));
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

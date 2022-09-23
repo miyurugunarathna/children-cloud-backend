@@ -12,10 +12,7 @@ const attSchema = new Schema(
       type: String,
       required: true,
     },
-    EmployeeName: {
-      type: String,
-      required: false,
-    },
+
     INtime: {
       type: String,
       required: true,

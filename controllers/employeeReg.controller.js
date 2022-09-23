@@ -36,8 +36,8 @@ export const deleteEmployeeController = async (req, res) => {
 
 export const getEmployeeController = async (req, res) => {
   try {
-    const empID = req.params.id;
-    const employee = await getEmployeesService(empID);
+    const empId = req.params.id;
+    const employee = await getEmployeesService(empId);
     res.json(Success(employee, "Successfully get Employee Details"));
   } catch (err) {
     res.status(err.status).json(err.message);

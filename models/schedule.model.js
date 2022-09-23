@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const MedicineSchema = new Schema(
+const ScheduleSchema = new Schema(
   {
     childID: {
       type: String,
@@ -12,19 +12,27 @@ const MedicineSchema = new Schema(
       type: String,
       required: true,
     },
-    medicineName: {
+    subject: {
       type: String,
       required: true,
     },
-    morning: {
+    address: {
       type: String,
       required: true,
     },
-    evening: {
+    startingTime: {
       type: String,
       required: true,
     },
-    beforAfterMeal: {
+    endingTime: {
+      type: String,
+      required: true,
+    },
+    day: {
+      type: String,
+      required: true,
+    },
+    teacherName: {
       type: String,
       required: true,
     },
@@ -36,4 +44,4 @@ const MedicineSchema = new Schema(
   { timestamps: true, versionKey: false },
 );
 
-export const Medicine = mongoose.model("Medicine", MedicineSchema);
+export const Schedule = mongoose.model("Schedule", ScheduleSchema);

@@ -22,6 +22,18 @@ export const updateMedicine = (id, data) =>
       throw new AppError("Internal server error.", 500);
     });
 
+export const updateStaff = (id, staffID) =>
+  Medicine.findByIdAndUpdate(id, { staffID }, { new: true })
+    .then((medicine) => {
+      if (!medicine) {
+        throw new AppError("Medicine Not Found", 404);
+      }
+      return Promise.resolve(medicine);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
 export const deleteMedicine = (id) =>
   Medicine.findByIdAndDelete(id)
     .then((medicine) => {

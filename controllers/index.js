@@ -1,4 +1,3 @@
-import { saveUser, loginUser } from "./user.controller.js";
 import {
   saveMedicineController,
   updateMedicineController,
@@ -19,6 +18,28 @@ import {
   getAllAttendanceController,
   getAttendanceController,
 } from "./attendance.controller.js";
+
+import {
+  saveEventController,
+  updateEventController,
+  deleteEventController,
+  getEventsController,
+} from "./event.controller.js";
+
+import {
+  saveChildController,
+  updateChildController,
+  deleteChildController,
+  getChildsController,
+  getAllChildsController,
+} from "./child.controller.js";
+
+import {
+  saveScheduleController,
+  updateScheduleController,
+  deleteScheduleController,
+  getSchedulesController,
+} from "./schedule.controller.js";
 
 import {
   savePaymentController,
@@ -48,8 +69,6 @@ import {
 } from "./item.controller.js";
 
 export {
-  saveUser,
-  loginUser,
   saveMedicineController,
   updateMedicineController,
   deleteMedicineController,
@@ -62,6 +81,19 @@ export {
   saveAttendanceController,
   getAllAttendanceController,
   getAttendanceController,
+  saveEventController,
+  updateEventController,
+  deleteEventController,
+  getEventsController,
+  saveChildController,
+  updateChildController,
+  deleteChildController,
+  getChildsController,
+  saveScheduleController,
+  updateScheduleController,
+  deleteScheduleController,
+  getSchedulesController,
+  getAllChildsController,
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
@@ -81,3 +113,4 @@ export {
   deleteItemController,
   getItemByChildIdController,
 };
+export * from "./user.controller.js";
