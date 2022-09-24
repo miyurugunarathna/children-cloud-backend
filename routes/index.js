@@ -5,6 +5,9 @@ import eventRouter from "./event.route.js";
 import scheduleRouter from "./schedule.route.js";
 import childRouter from "./child.route.js";
 import AssignStaffRouter from "./assignStaff.route.js";
+import paymentRoute from "./payment.route.js";
+import billRouter from "./bill.route.js";
+import itemRouter from "./item.route.js";
 
 const apiRouter = express.Router();
 
@@ -14,5 +17,8 @@ apiRouter.use("/events", eventRouter);
 apiRouter.use("/schedule", scheduleRouter);
 apiRouter.use("/child", childRouter);
 apiRouter.use("/assign", AssignStaffRouter);
+apiRouter.use("/payment", paymentRoute);
+apiRouter.use("/bill", billRouter);
+apiRouter.use("/item", itemRouter);
 
 export default apiRouter;
