@@ -29,6 +29,7 @@ import {
   getPendingStaff,
   updateAssignedStaffStatus,
   updateAssignStaffData,
+  getStaffByChildID,
 } from "./assignStaff.repository.js";
 
 import {
@@ -70,4 +71,5 @@ export {
   updateAssignStaffData,
   updateStaff,
   updateStaffSchedule,
+  getStaffByChildID,
 };

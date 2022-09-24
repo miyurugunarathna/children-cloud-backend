@@ -10,7 +10,8 @@ import Success from "../utils/success.js";
 export const saveAssignStaffController = async (req, res) => {
   try {
     const assignStaff = await saveAssignedStaffService(req.body);
-    res.json(Success(assignStaff, " Successfully StaffAssigned to the child."));
+    // res.json(Success(assignStaff, " Successfully StaffAssigned to the child."));
+    res.json(assignStaff);
   } catch (err) {
     res.status(err.status).json(err.message);
   }

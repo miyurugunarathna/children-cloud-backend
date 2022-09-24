@@ -3,6 +3,7 @@ import {
   updateSchedule,
   deleteSchedule,
   getSchedules,
+  getStaffByChildID,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -18,7 +19,23 @@ export const saveScheduleService = async (data) => {
     teacherName,
   } = data;
   try {
-    const schedule = await saveSchedule({
+    const staffUser = await getStaffByChildID(childID);
+
+    if (!staffUser) {
+      const schedule = await saveSchedule({
+        childID,
+        childName,
+        subject,
+        address,
+        startingTime,
+        endingTime,
+        day,
+        teacherName,
+        staffID: "Staff didn't Assigned",
+      });
+      return Promise.resolve(schedule);
+    }
+    const schedule2 = await saveSchedule({
       childID,
       childName,
       subject,
@@ -27,8 +44,9 @@ export const saveScheduleService = async (data) => {
       endingTime,
       day,
       teacherName,
+      staffID: staffUser.staff,
     });
-    return Promise.resolve(schedule);
+    return Promise.resolve(schedule2);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

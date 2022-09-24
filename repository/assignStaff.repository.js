@@ -67,6 +67,15 @@ export const getPendingStaff = (data) =>
       throw new AppError("Internal server error.", 500);
     });
 
+export const getStaffByChildID = (childID) =>
+  AssignStaff.findOne({ childID })
+    .then((staff) => {
+      return Promise.resolve(staff);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
 export const getOtherStaffs = (data1, data2) =>
   AssignStaff.find({ $or: [{ status: data1 }, { status: data2 }] })
     .then((otherStaffs) => {

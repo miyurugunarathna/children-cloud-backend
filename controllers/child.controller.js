@@ -45,6 +45,16 @@ export const getChildsController = async (req, res) => {
   }
 };
 
+export const getChildstempController = async (req, res) => {
+  try {
+    const parentID = req.params.id;
+    const childs = await getChildsService(parentID);
+    res.json(Success(childs, "Successfully childrens fetched."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
 export const getAllChildsController = async (req, res) => {
   try {
     const childs = await getAllChildsService();

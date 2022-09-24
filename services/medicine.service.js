@@ -3,6 +3,7 @@ import {
   updateMedicine,
   deleteMedicine,
   getMedicines,
+  getStaffByChildID,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -10,15 +11,31 @@ export const saveMedicineService = async (data) => {
   const { childID, childName, medicineName, morning, evening, beforAfterMeal } =
     data;
   try {
-    const medicine = await saveMedicine({
+    const staffUser = await getStaffByChildID(childID);
+
+    if (!staffUser) {
+      const medicine = await saveMedicine({
+        childID,
+        childName,
+        medicineName,
+        morning,
+        evening,
+        beforAfterMeal,
+        staffID: "Staff didn't Assigned",
+      });
+      return Promise.resolve(medicine);
+    }
+
+    const medicine2 = await saveMedicine({
       childID,
       childName,
       medicineName,
       morning,
       evening,
       beforAfterMeal,
+      staffID: staffUser.staff,
     });
-    return Promise.resolve(medicine);
+    return Promise.resolve(medicine2);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

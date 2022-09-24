@@ -19,6 +19,7 @@ import {
   deleteChildController,
   getChildsController,
   getAllChildsController,
+  getChildstempController,
 } from "./child.controller.js";
 
 import {
@@ -61,4 +62,5 @@ export {
   deleteAssignStaffController,
   getAllAssignedStaffController,
   getPendingAssignedStaffController,
+  getChildstempController,
 };
