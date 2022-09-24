@@ -20,7 +20,17 @@ export const loginUser = (userName) =>
     });
 
 export const getUser = (data) =>
-  User.findById(data)
+  User.findOne(data)
+    .then((user) => {
+      return Promise.resolve(user);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const getAllUsers = () =>
+  User.find()
+    .select("-password")
     .then((user) => {
       return Promise.resolve(user);
     })
