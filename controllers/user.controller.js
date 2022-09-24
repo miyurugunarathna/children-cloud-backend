@@ -1,4 +1,12 @@
-import { save, login, getOne, update, remove } from "../services/index.js";
+import {
+  save,
+  login,
+  getOne,
+  getAll,
+  update,
+  remove,
+  view,
+} from "../services/index.js";
 import Success from "../utils/success.js";
 
 export const saveUser = async (req, res) => {
@@ -23,6 +31,24 @@ export const getUser = async (req, res) => {
   try {
     const user = await getOne(req.params.id);
     res.json(Success(user, "Get user by id success."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await getAll();
+    res.json(Success(users, "Get all users success."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const viewProfile = async (req, res) => {
+  try {
+    const user = await view(req.user);
+    res.json(Success(user, "View profile success."));
   } catch (err) {
     res.status(err.status).json(err.message);
   }
