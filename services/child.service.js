@@ -5,6 +5,7 @@ import {
   getChilds,
   getAllChilds,
   getAllStaffUser,
+  getChildByID,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -67,6 +68,15 @@ export const getStaffService = async (role) => {
   try {
     const staffs = await getAllStaffUser(role);
     return Promise.resolve(staffs);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getSingleChildService = async (id) => {
+  try {
+    const child = await getChildByID(id);
+    return Promise.resolve(child);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

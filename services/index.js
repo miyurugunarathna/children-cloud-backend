@@ -18,6 +18,7 @@ import {
   getChildsService,
   getAllChildsService,
   getStaffService,
+  getSingleChildService,
 } from "./child.service.js";
 
 import {
@@ -104,5 +105,6 @@ export {
   updateItemService,
   deleteItemService,
   getStaffService,
+  getSingleChildService,
 };
 export * from "./user.service.js";

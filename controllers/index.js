@@ -20,6 +20,7 @@ import {
   getAllChildsController,
   getChildstempController,
   getStaffController,
+  getSingleChildController,
 } from "./child.controller.js";
 
 import {
@@ -107,5 +108,6 @@ export {
   deleteItemController,
   getItemByChildIdController,
   getStaffController,
+  getSingleChildController,
 };
 export * from "./user.controller.js";

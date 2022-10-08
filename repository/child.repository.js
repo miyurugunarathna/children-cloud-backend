@@ -60,3 +60,15 @@ export const getAllStaffUser = (role) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getChildByID = (id) =>
+  Child.findById(id)
+    .then((child) => {
+      if (!child) {
+        throw new AppError("Payment Details not Found", 404);
+      }
+      return Promise.resolve(child);
+    })
+    .catch((err) => {
+      throw new AppError(`Internal Server Error: ${err}`, 500);
+    });
