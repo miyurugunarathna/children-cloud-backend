@@ -6,6 +6,7 @@ import {
   getChildsController,
   getAllChildsController,
   getChildstempController,
+  getStaffController,
 } from "../controllers/index.js";
 import { authenticate } from "../middleware/auth.middleware.js";
 
@@ -17,5 +18,6 @@ childRouter.put("/:id", updateChildController);
 childRouter.get("/", authenticate, getChildsController);
 childRouter.get("temp/:id", getChildstempController);
 childRouter.get("/all", getAllChildsController);
+childRouter.get("/allStaff", getStaffController);
 
 export default childRouter;

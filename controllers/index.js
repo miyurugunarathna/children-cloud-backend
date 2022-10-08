@@ -19,6 +19,7 @@ import {
   getChildsController,
   getAllChildsController,
   getChildstempController,
+  getStaffController,
 } from "./child.controller.js";
 
 import {
@@ -27,6 +28,8 @@ import {
   deleteScheduleController,
   getSchedulesController,
 } from "./schedule.controller.js";
+
+import {
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
@@ -103,5 +106,6 @@ export {
   updateItemController,
   deleteItemController,
   getItemByChildIdController,
+  getStaffController,
 };
 export * from "./user.controller.js";

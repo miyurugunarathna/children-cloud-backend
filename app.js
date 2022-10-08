@@ -2,7 +2,6 @@ import "dotenv/config";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import bodyParser from "body-parser";
 import { connect } from "./utils/dbConnect.js";
 
 import apiRouter from "./routes/index.js";

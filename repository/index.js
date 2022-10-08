@@ -17,6 +17,7 @@ import {
   deleteChild,
   getChilds,
   getAllChilds,
+  getAllStaffUser,
 } from "./child.repository.js";
 
 import {
@@ -113,5 +114,6 @@ export {
   updateItem,
   deleteItem,
   getItemByChildId,
+  getAllStaffUser,
 };
 export * from "./user.repository.js";

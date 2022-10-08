@@ -1,4 +1,4 @@
-import { Child } from "../models/index.js";
+import { Child, User } from "../models/index.js";
 import AppError from "../utils/appError.js";
 
 export const saveChild = (data) =>
@@ -47,6 +47,15 @@ export const getAllChilds = () =>
   Child.find()
     .then((childs) => {
       return Promise.resolve(childs);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const getAllStaffUser = (role) =>
+  User.find({ role })
+    .then((staffs) => {
+      return Promise.resolve(staffs);
     })
     .catch(() => {
       throw new AppError("Internal server error.", 500);

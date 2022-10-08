@@ -4,6 +4,7 @@ import {
   deleteChildService,
   getChildsService,
   getAllChildsService,
+  getStaffService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -59,6 +60,16 @@ export const getAllChildsController = async (req, res) => {
   try {
     const childs = await getAllChildsService();
     res.json(Success(childs, "Successfully childrens fetched."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getStaffController = async (req, res) => {
+  try {
+    const role = "STAFF";
+    const staffs = await getStaffService(role);
+    res.json(Success(staffs, "Successfully Fetched All Staffs."));
   } catch (err) {
     res.status(err.status).json(err.message);
   }

@@ -17,6 +17,7 @@ import {
   deleteChildService,
   getChildsService,
   getAllChildsService,
+  getStaffService,
 } from "./child.service.js";
 
 import {
@@ -33,7 +34,8 @@ import {
   getAllAssignedStaffService,
   getPendingAssignedStaffService,
 } from "./assignStaff.service.js";
-=======
+
+import {
   savePaymentService,
   getPaymentByIdService,
   getPaymentService,
@@ -101,5 +103,6 @@ export {
   getItemByIdService,
   updateItemService,
   deleteItemService,
+  getStaffService,
 };
 export * from "./user.service.js";
