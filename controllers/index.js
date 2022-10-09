@@ -8,6 +8,20 @@ import {
 } from "./medicine.controller.js";
 
 import {
+  saveEmployeeController,
+  updateEmployeeController,
+  deleteEmployeeController,
+  getEmployeeController,
+  getAllEmployeeController,
+} from "./employeeReg.controller.js";
+
+import {
+  saveAttendanceController,
+  getAllAttendanceController,
+  getAttendanceController,
+} from "./attendance.controller.js";
+
+import {
   saveEventController,
   updateEventController,
   deleteEventController,
@@ -74,6 +88,14 @@ export {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  saveEmployeeController,
+  updateEmployeeController,
+  deleteEmployeeController,
+  getEmployeeController,
+  getAllEmployeeController,
+  saveAttendanceController,
+  getAllAttendanceController,
+  getAttendanceController,
   saveEventController,
   updateEventController,
   deleteEventController,

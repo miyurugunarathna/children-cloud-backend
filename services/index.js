@@ -32,6 +32,7 @@ import {
 } from "./schedule.service.js";
 
 import {
+
   saveAssignedStaffService,
   updateAssignedStaffDataService,
   deleteAssignedStaffService,
@@ -39,6 +40,20 @@ import {
   getPendingAssignedStaffService,
   getAssignedKidsForStaffService,
 } from "./assignStaff.service.js";
+
+import {
+  saveEmployeeService,
+  updateEmployeeService,
+  deleteEmployeeService,
+  getEmployeesService,
+  getAllEmployeeService,
+} from "./employeeReg.service.js";
+
+import {
+  saveAttendanceService,
+  getAllAttendanceService,
+  getAttendanceService,
+} from "./attendance.service.js";
 
 import {
   savePaymentService,
@@ -72,6 +87,14 @@ export {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  saveEmployeeService,
+  updateEmployeeService,
+  deleteEmployeeService,
+  getEmployeesService,
+  getAllEmployeeService,
+  saveAttendanceService,
+  getAllAttendanceService,
+  getAttendanceService,
   saveEventService,
   updateEventService,
   deleteEventService,
