@@ -34,7 +34,7 @@ export const saveScheduleService = async (data) => {
         teacherName,
         staffID: "Staff didn't Assigned",
         status: "pending",
-        date: new Date(),
+        date: "date did not added",
         description: "description not added for the above date",
       });
       return Promise.resolve(schedule);
@@ -50,7 +50,7 @@ export const saveScheduleService = async (data) => {
       teacherName,
       staffID: staffUser.staff,
       status: "pending",
-      date: new Date(),
+      date: "date did not added",
       description: "description not added for the above date",
     });
     return Promise.resolve(schedule2);
