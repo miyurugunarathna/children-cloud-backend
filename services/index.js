@@ -27,6 +27,20 @@ import {
 } from "./schedule.service.js";
 
 import {
+  saveEmployeeService,
+  updateEmployeeService,
+  deleteEmployeeService,
+  getEmployeesService,
+  getAllEmployeeService,
+} from "./employeeReg.service.js";
+
+import {
+  saveAttendanceService,
+  getAllAttendanceService,
+  getAttendanceService,
+} from "./attendance.service.js";
+
+import {
   savePaymentService,
   getPaymentByIdService,
   getPaymentService,
@@ -58,6 +72,14 @@ export {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  saveEmployeeService,
+  updateEmployeeService,
+  deleteEmployeeService,
+  getEmployeesService,
+  getAllEmployeeService,
+  saveAttendanceService,
+  getAllAttendanceService,
+  getAttendanceService,
   saveEventService,
   updateEventService,
   deleteEventService,
