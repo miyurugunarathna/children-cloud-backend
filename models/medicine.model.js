@@ -32,6 +32,14 @@ const MedicineSchema = new Schema(
       type: String,
       default: "Staff didn't Assigned",
     },
+    date: {
+      type: Date,
+      default: new Date(),
+    },
+    status: {
+      type: String,
+      default: "pending",
+    },
   },
   { timestamps: true, versionKey: false },
 );

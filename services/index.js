@@ -3,6 +3,7 @@ import {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  getMedicinesForStaffService,
 } from "./medicine.service.js";
 import {
   saveEventService,
@@ -106,5 +107,6 @@ export {
   deleteItemService,
   getStaffService,
   getSingleChildService,
+  getMedicinesForStaffService,
 };
 export * from "./user.service.js";

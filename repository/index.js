@@ -4,6 +4,7 @@ import {
   deleteMedicine,
   getMedicines,
   updateStaff,
+  getMedicinesForStaff,
 } from "./medicine.repository.js";
 import {
   saveEvent,
@@ -117,5 +118,6 @@ export {
   getItemByChildId,
   getAllStaffUser,
   getChildByID,
+  getMedicinesForStaff,
 };
 export * from "./user.repository.js";

@@ -4,6 +4,7 @@ import {
   deleteMedicine,
   getMedicines,
   getStaffByChildID,
+  getMedicinesForStaff,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -22,6 +23,8 @@ export const saveMedicineService = async (data) => {
         evening,
         beforAfterMeal,
         staffID: "Staff didn't Assigned",
+        status: "pending",
+        date: new Date(),
       });
       return Promise.resolve(medicine);
     }
@@ -34,6 +37,8 @@ export const saveMedicineService = async (data) => {
       evening,
       beforAfterMeal,
       staffID: staffUser.staff,
+      status: "pending",
+      date: new Date(),
     });
     return Promise.resolve(medicine2);
   } catch (err) {
@@ -62,6 +67,15 @@ export const deleteMedicineService = async (id) => {
 export const getMedicinesService = async (id) => {
   try {
     const medicines = await getMedicines(id);
+    return Promise.resolve(medicines);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getMedicinesForStaffService = async (id) => {
+  try {
+    const medicines = await getMedicinesForStaff(id);
     return Promise.resolve(medicines);
   } catch (err) {
     throw new AppError(err.message, err.status);

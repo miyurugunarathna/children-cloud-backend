@@ -3,6 +3,7 @@ import {
   updateMedicineService,
   deleteMedicineService,
   getMedicinesService,
+  getMedicinesForStaffService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -37,6 +38,16 @@ export const getMedicinesController = async (req, res) => {
   try {
     const childID = req.params.id;
     const medicines = await getMedicinesService(childID);
+    res.json(Success(medicines, "Successfully Fetched Medicines Details."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getMedicinesForStaffController = async (req, res) => {
+  try {
+    const staffID = req.user._id;
+    const medicines = await getMedicinesForStaffService(staffID);
     res.json(Success(medicines, "Successfully Fetched Medicines Details."));
   } catch (err) {
     res.status(err.status).json(err.message);

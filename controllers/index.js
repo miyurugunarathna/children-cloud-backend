@@ -3,6 +3,7 @@ import {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  getMedicinesForStaffController,
 } from "./medicine.controller.js";
 
 import {
@@ -109,5 +110,6 @@ export {
   getItemByChildIdController,
   getStaffController,
   getSingleChildController,
+  getMedicinesForStaffController,
 };
 export * from "./user.controller.js";
