@@ -4,6 +4,7 @@ import {
   deleteMedicineController,
   getMedicinesController,
   getMedicinesForStaffController,
+  getMedicinesForParentController,
 } from "./medicine.controller.js";
 
 import {
@@ -115,5 +116,6 @@ export {
   getMedicinesForStaffController,
   getAssignedKidsForStaffController,
   getScheduleForStaffController,
+  getMedicinesForParentController,
 };
 export * from "./user.controller.js";

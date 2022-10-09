@@ -42,12 +42,7 @@ export const saveAssignedStaffService = async (data) => {
 
 export const updateAssignedStaffDataService = async (id, data) => {
   try {
-    const { childID, staff, status } = data;
-    const assignedStaff = await updateAssignStaffData(id, {
-      childID,
-      staff,
-      status,
-    });
+    const assignedStaff = await updateAssignStaffData(id, data);
     return Promise.resolve(assignedStaff);
   } catch (err) {
     throw new AppError(err.message, err.status);

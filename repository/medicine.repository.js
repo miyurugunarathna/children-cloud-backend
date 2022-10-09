@@ -63,3 +63,12 @@ export const getMedicinesForStaff = (id) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getMedicinesForParents = (id) =>
+  Medicine.find({ parentID: id })
+    .then((medicines) => {
+      return Promise.resolve(medicines);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });

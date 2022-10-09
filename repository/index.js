@@ -5,6 +5,7 @@ import {
   getMedicines,
   updateStaff,
   getMedicinesForStaff,
+  getMedicinesForParents,
 } from "./medicine.repository.js";
 import {
   saveEvent,
@@ -123,5 +124,6 @@ export {
   getMedicinesForStaff,
   getAssignedKidsForStaff,
   getScheduleForStaff,
+  getMedicinesForParents,
 };
 export * from "./user.repository.js";

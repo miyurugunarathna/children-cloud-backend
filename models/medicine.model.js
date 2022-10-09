@@ -44,6 +44,10 @@ const MedicineSchema = new Schema(
       type: String,
       default: "description not added for the above date",
     },
+    parentID: {
+      type: String,
+      default: "sample ID",
+    },
   },
   { timestamps: true, versionKey: false },
 );
