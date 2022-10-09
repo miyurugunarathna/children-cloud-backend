@@ -48,6 +48,10 @@ const ScheduleSchema = new Schema(
       type: String,
       default: "pending",
     },
+    description: {
+      type: String,
+      default: "description not added for the above date",
+    },
   },
   { timestamps: true, versionKey: false },
 );

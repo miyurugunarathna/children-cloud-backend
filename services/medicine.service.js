@@ -25,6 +25,7 @@ export const saveMedicineService = async (data) => {
         staffID: "Staff didn't Assigned",
         status: "pending",
         date: new Date(),
+        description: "description not added for the above date",
       });
       return Promise.resolve(medicine);
     }
@@ -39,6 +40,7 @@ export const saveMedicineService = async (data) => {
       staffID: staffUser.staff,
       status: "pending",
       date: new Date(),
+      description: "description not added for the above date",
     });
     return Promise.resolve(medicine2);
   } catch (err) {
