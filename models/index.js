@@ -1,6 +1,10 @@
 import { User } from "./user.model.js";
 import { Event } from "./event.model.js";
 import { Medicine } from "./medicine.model.js";
+
+import { Employee } from "./employeeReg.model.js";
+import { Attendance } from "./attendance.model.js";
+
 import { Child } from "./child.model.js";
 import { Schedule } from "./schedule.model.js";
 import { AssignStaff } from "./assignStaff.model.js";
@@ -12,6 +16,8 @@ export {
   User,
   Event,
   Medicine,
+  Employee,
+  Attendance,
   Payment,
   Bill,
   Item,

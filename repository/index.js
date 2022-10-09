@@ -45,6 +45,20 @@ import {
 } from "./schedule.repository.js";
 
 import {
+  saveEmployee,
+  updateEmployee,
+  deleteEmployee,
+  getEmployee,
+  getAllEmployee,
+} from "./employeeReg.repository.js";
+
+import {
+  saveAttendance,
+  getAttendance,
+  getAllAttendance,
+} from "./attendance.repository.js";
+
+import {
   savePayment,
   getPayment,
   getPaymentById,
@@ -76,6 +90,14 @@ export {
   updateMedicine,
   deleteMedicine,
   getMedicines,
+  saveEmployee,
+  updateEmployee,
+  deleteEmployee,
+  getEmployee,
+  getAllEmployee,
+  saveAttendance,
+  getAttendance,
+  getAllAttendance,
   saveEvent,
   updateEvent,
   deleteEvent,
