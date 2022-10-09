@@ -8,6 +8,7 @@ import {
   updateStaffSchedule,
   getMedicines,
   getSchedules,
+  getAssignedKidsForStaff,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -76,6 +77,15 @@ export const getPendingAssignedStaffService = async () => {
     const status = "pending";
     const assignedStaffs = await getPendingStaff(status);
     return Promise.resolve(assignedStaffs);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getAssignedKidsForStaffService = async (id) => {
+  try {
+    const kids = await getAssignedKidsForStaff(id);
+    return Promise.resolve(kids);
   } catch (err) {
     throw new AppError(err.message, err.status);
   }

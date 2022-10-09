@@ -93,3 +93,12 @@ export const getAll = () =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getAssignedKidsForStaff = (id) =>
+  AssignStaff.find({ staff: id })
+    .then((staffs) => {
+      return Promise.resolve(staffs);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });

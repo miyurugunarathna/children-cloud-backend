@@ -4,6 +4,7 @@ import {
   deleteSchedule,
   getSchedules,
   getStaffByChildID,
+  getScheduleForStaff,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
@@ -77,6 +78,15 @@ export const deleteScheduleService = async (id) => {
 export const getSchedulesService = async (id) => {
   try {
     const schedules = await getSchedules(id);
+    return Promise.resolve(schedules);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getSchedulesForStaffService = async (id) => {
+  try {
+    const schedules = await getScheduleForStaff(id);
     return Promise.resolve(schedules);
   } catch (err) {
     throw new AppError(err.message, err.status);

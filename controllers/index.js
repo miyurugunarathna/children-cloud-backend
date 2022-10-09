@@ -29,6 +29,7 @@ import {
   updateScheduleController,
   deleteScheduleController,
   getSchedulesController,
+  getScheduleForStaffController,
 } from "./schedule.controller.js";
 
 import {
@@ -64,6 +65,7 @@ import {
   deleteAssignStaffController,
   getAllAssignedStaffController,
   getPendingAssignedStaffController,
+  getAssignedKidsForStaffController,
 } from "./assignStaff.controller.js";
 
 export {
@@ -111,5 +113,7 @@ export {
   getStaffController,
   getSingleChildController,
   getMedicinesForStaffController,
+  getAssignedKidsForStaffController,
+  getScheduleForStaffController,
 };
 export * from "./user.controller.js";

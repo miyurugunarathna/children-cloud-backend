@@ -27,6 +27,7 @@ import {
   updateScheduleService,
   deleteScheduleService,
   getSchedulesService,
+  getSchedulesForStaffService,
 } from "./schedule.service.js";
 
 import {
@@ -35,6 +36,7 @@ import {
   deleteAssignedStaffService,
   getAllAssignedStaffService,
   getPendingAssignedStaffService,
+  getAssignedKidsForStaffService,
 } from "./assignStaff.service.js";
 
 import {
@@ -108,5 +110,7 @@ export {
   getStaffService,
   getSingleChildService,
   getMedicinesForStaffService,
+  getAssignedKidsForStaffService,
+  getSchedulesForStaffService,
 };
 export * from "./user.service.js";

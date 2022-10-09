@@ -54,3 +54,12 @@ export const getSchedules = (id) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getScheduleForStaff = (id) =>
+  Schedule.find({ staffID: id })
+    .then((schedules) => {
+      return Promise.resolve(schedules);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });

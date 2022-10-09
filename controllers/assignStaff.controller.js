@@ -4,6 +4,7 @@ import {
   deleteAssignedStaffService,
   getAllAssignedStaffService,
   getPendingAssignedStaffService,
+  getAssignedKidsForStaffService,
 } from "../services/index.js";
 import Success from "../utils/success.js";
 
@@ -53,6 +54,16 @@ export const getPendingAssignedStaffController = async (req, res) => {
   try {
     const assignStaffs = await getPendingAssignedStaffService();
     res.json(Success(assignStaffs, "Successfully Fetched Staff Details."));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const getAssignedKidsForStaffController = async (req, res) => {
+  try {
+    const staffID = req.user._id;
+    const kids = await getAssignedKidsForStaffService(staffID);
+    res.json(Success(kids, "Successfully Fetched assigned Kids Details."));
   } catch (err) {
     res.status(err.status).json(err.message);
   }

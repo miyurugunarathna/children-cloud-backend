@@ -32,6 +32,7 @@ import {
   updateAssignedStaffStatus,
   updateAssignStaffData,
   getStaffByChildID,
+  getAssignedKidsForStaff,
 } from "./assignStaff.repository.js";
 
 import {
@@ -40,6 +41,7 @@ import {
   deleteSchedule,
   getSchedules,
   updateStaffSchedule,
+  getScheduleForStaff,
 } from "./schedule.repository.js";
 
 import {
@@ -119,5 +121,7 @@ export {
   getAllStaffUser,
   getChildByID,
   getMedicinesForStaff,
+  getAssignedKidsForStaff,
+  getScheduleForStaff,
 };
 export * from "./user.repository.js";
