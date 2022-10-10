@@ -4,6 +4,7 @@ import {
   saveUser,
   loginUser,
   getUser,
+  getAllUsers,
   updateUser,
   deleteUser,
 } from "../repository/index.js";
@@ -52,6 +53,30 @@ export const getOne = async (userId) => {
   try {
     const user = await getUser(userId);
     return Promise.resolve(user);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const getAll = async () => {
+  try {
+    const users = await getAllUsers();
+    return Promise.resolve(users);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const view = async (user) => {
+  try {
+    return Promise.resolve({
+      _id: user?._id,
+      firstName: user?.firstName,
+      lastName: user?.lastName,
+      userName: user?.userName,
+      email: user?.email,
+      role: user?.role,
+    });
   } catch (err) {
     throw new AppError(err.message, err.status);
   }
