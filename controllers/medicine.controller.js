@@ -58,7 +58,7 @@ export const getMedicinesForStaffController = async (req, res) => {
 
 export const getMedicinesForParentController = async (req, res) => {
   try {
-    const parentID = req.user._id;
+    const parentID = req.params.id;
     const medicines = await getMedicineForParentService(parentID);
     res.json(Success(medicines, "Successfully Fetched Medicines Details."));
   } catch (err) {

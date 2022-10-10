@@ -16,6 +16,6 @@ medicineRouter.delete("/:id", deleteMedicineController);
 medicineRouter.put("/:id", updateMedicineController);
 medicineRouter.get("/:id", getMedicinesController);
 medicineRouter.get("/", authenticate, getMedicinesForStaffController);
-medicineRouter.get("/parent", authenticate, getMedicinesForParentController);
+medicineRouter.get("/parent/:id", getMedicinesForParentController);
 
 export default medicineRouter;
