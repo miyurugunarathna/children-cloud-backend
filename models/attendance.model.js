@@ -4,10 +4,6 @@ const { Schema } = mongoose;
 
 const attSchema = new Schema(
   {
-    Date: {
-      type: Date,
-      required: true,
-    },
     EmpID: {
       type: String,
       required: true,
@@ -23,10 +19,6 @@ const attSchema = new Schema(
     },
     TotalHrs: {
       type: Number,
-      required: true,
-    },
-    IsPresent: {
-      type: Boolean,
       required: true,
     },
   },

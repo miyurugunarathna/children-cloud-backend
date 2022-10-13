@@ -27,8 +27,7 @@ export const getAttendanceController = async (req, res) => {
 
 export const getAllAttendanceController = async (req, res) => {
   try {
-    const Date = req.user._id;
-    const attendance = await getAllAttendance(Date);
+    const attendance = await getAllAttendance();
     res.json(Success(attendance, "Successfully get Attendance Details"));
   } catch (err) {
     res.status(err.status).json(err.message);

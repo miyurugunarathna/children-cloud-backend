@@ -1,4 +1,4 @@
-import { BabySitter } from "../models/childAllocate.js";
+import { BabySitter } from "../models/childAllocate.model.js";
 import AppError from "../utils/appError.js";
 
 export const saveBabySitter = (data) =>
@@ -32,4 +32,22 @@ export const deleteBabySitter = (id) =>
     })
     .catch(() => {
       throw new AppError("Internal server error.", 500);
+    });
+
+export const getBabySitter = (id) =>
+  BabySitter.findById(id)
+    .then((babySitter) => {
+      return Promise.resolve(babySitter);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const getAllBabySitter = (data) =>
+  BabySitter.find(data)
+    .then((babySitter) => {
+      return Promise.resolve(babySitter);
+    })
+    .catch(() => {
+      throw new AppError("Interna; server error.", 500);
     });

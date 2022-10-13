@@ -68,6 +68,14 @@ import {
   getItemByChildIdController,
 } from "./item.controller.js";
 
+import {
+  saveBabySitterController,
+  deleteBabySitterController,
+  updateBabySitterController,
+  getAllBabySitterController,
+  getBabySitterController,
+} from "./childAllocate.controller.js";
+
 export {
   saveMedicineController,
   updateMedicineController,
@@ -112,5 +120,10 @@ export {
   updateItemController,
   deleteItemController,
   getItemByChildIdController,
+  saveBabySitterController,
+  deleteBabySitterController,
+  updateBabySitterController,
+  getAllBabySitterController,
+  getBabySitterController,
 };
 export * from "./user.controller.js";
