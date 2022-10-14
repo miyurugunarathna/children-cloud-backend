@@ -9,12 +9,17 @@ import {
   getMedicines,
   getSchedules,
   getAssignedKidsForStaff,
+  getStaffByChildID,
 } from "../repository/index.js";
 import AppError from "../utils/appError.js";
 
 export const saveAssignedStaffService = async (data) => {
   const { childID, name, age, staff, status } = data;
   try {
+    const staff2 = await getStaffByChildID(childID);
+    if (staff2) {
+      throw new AppError("Child already been Assigned.", 400);
+    }
     const assignedStaff = await saveAssignedStaff({
       childID,
       name,
