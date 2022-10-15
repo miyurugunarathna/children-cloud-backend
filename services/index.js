@@ -67,6 +67,14 @@ import {
   deleteItemService,
 } from "./item.service.js";
 
+import {
+  saveBabySitterService,
+  deleteBabySitterService,
+  updateBabySitterService,
+  getAllBabySitterService,
+  getBabySitterService,
+} from "./childAllocate.service.js";
+
 export {
   saveMedicineService,
   updateMedicineService,
@@ -111,5 +119,10 @@ export {
   getItemByIdService,
   updateItemService,
   deleteItemService,
+  saveBabySitterService,
+  deleteBabySitterService,
+  updateBabySitterService,
+  getAllBabySitterService,
+  getBabySitterService,
 };
 export * from "./user.service.js";

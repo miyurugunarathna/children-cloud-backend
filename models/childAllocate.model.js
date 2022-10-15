@@ -2,27 +2,25 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const attSchema = new Schema(
+const childAllocate = new Schema(
   {
-    EmpID: {
+    BabySitter: {
       type: String,
       required: true,
     },
 
-    INtime: {
+    child01: {
       type: String,
       required: true,
     },
-    OUTtime: {
+    child02: {
       type: String,
-      required: true,
     },
-    TotalHrs: {
-      type: Number,
-      required: true,
+    child03: {
+      type: String,
     },
   },
   { timestamps: true, versionKey: false },
 );
 
-export const Attendance = mongoose.model("Attendance", attSchema);
+export const BabySitter = mongoose.model("BabySitter", childAllocate);

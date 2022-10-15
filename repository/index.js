@@ -78,6 +78,14 @@ import {
   getItemByChildId,
 } from "./item.repository.js";
 
+import {
+  saveBabySitter,
+  deleteBabySitter,
+  updateBabySitter,
+  getAllBabySitter,
+  getBabySitter,
+} from "./childAllocate.repository.js";
+
 export {
   saveMedicine,
   updateMedicine,
@@ -131,5 +139,10 @@ export {
   updateItem,
   deleteItem,
   getItemByChildId,
+  saveBabySitter,
+  deleteBabySitter,
+  updateBabySitter,
+  getAllBabySitter,
+  getBabySitter,
 };
 export * from "./user.repository.js";

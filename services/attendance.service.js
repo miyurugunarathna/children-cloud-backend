@@ -7,15 +7,13 @@ import {
 import AppError from "../utils/appError.js";
 
 export const saveAttendanceService = async (data) => {
-  const { Date, EmpID, EmployeeName, INtime, OUTtime, IsPresent } = data;
+  const { EmpID, INtime, OUTtime, TotalHrs } = data;
   try {
     const attendance = await saveAttendance({
-      Date,
       EmpID,
-      EmployeeName,
       INtime,
       OUTtime,
-      IsPresent,
+      TotalHrs,
     });
     return Promise.resolve(attendance);
   } catch (err) {

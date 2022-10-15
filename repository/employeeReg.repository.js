@@ -43,7 +43,7 @@ export const getEmployee = (id) =>
       throw new AppError("Internal server error.", 500);
     });
 
-export const getAllEmployee = (data) =>
+export const getAllEmployee = (data = "") =>
   Employee.find(data)
     .then((employee) => {
       return Promise.resolve(employee);

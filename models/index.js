@@ -13,6 +13,8 @@ import { Payment } from "./payment.model.js";
 import { Bill } from "./bill.model.js";
 import { Item } from "./item.model.js";
 
+import { BabySitter } from "./childAllocate.model.js";
+
 export {
   User,
   Event,
@@ -25,4 +27,5 @@ export {
   Child,
   Schedule,
   AssignStaff,
+  BabySitter,
 };
