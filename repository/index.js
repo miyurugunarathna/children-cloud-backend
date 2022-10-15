@@ -4,6 +4,8 @@ import {
   deleteMedicine,
   getMedicines,
   updateStaff,
+  getMedicinesForStaff,
+  getMedicinesForParents,
 } from "./medicine.repository.js";
 import {
   saveEvent,
@@ -17,6 +19,8 @@ import {
   deleteChild,
   getChilds,
   getAllChilds,
+  getAllStaffUser,
+  getChildByID,
 } from "./child.repository.js";
 
 import {
@@ -28,6 +32,8 @@ import {
   getPendingStaff,
   updateAssignedStaffStatus,
   updateAssignStaffData,
+  getStaffByChildID,
+  getAssignedKidsForStaff,
 } from "./assignStaff.repository.js";
 
 import {
@@ -35,6 +41,8 @@ import {
   updateSchedule,
   deleteSchedule,
   getSchedules,
+  updateStaffSchedule,
+  getScheduleForStaff,
 } from "./schedule.repository.js";
 
 import {
@@ -113,6 +121,8 @@ export {
   updateAssignedStaffStatus,
   updateAssignStaffData,
   updateStaff,
+  updateStaffSchedule,
+  getStaffByChildID,
   savePayment,
   getPayment,
   getPaymentById,
@@ -131,5 +141,11 @@ export {
   updateItem,
   deleteItem,
   getItemByChildId,
+  getAllStaffUser,
+  getChildByID,
+  getMedicinesForStaff,
+  getAssignedKidsForStaff,
+  getScheduleForStaff,
+  getMedicinesForParents,
 };
 export * from "./user.repository.js";

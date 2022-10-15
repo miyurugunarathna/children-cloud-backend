@@ -3,6 +3,8 @@ import {
   updateMedicineController,
   deleteMedicineController,
   getMedicinesController,
+  getMedicinesForStaffController,
+  getMedicinesForParentController,
 } from "./medicine.controller.js";
 
 import {
@@ -32,6 +34,9 @@ import {
   deleteChildController,
   getChildsController,
   getAllChildsController,
+  getChildstempController,
+  getStaffController,
+  getSingleChildController,
 } from "./child.controller.js";
 
 import {
@@ -39,6 +44,7 @@ import {
   updateScheduleController,
   deleteScheduleController,
   getSchedulesController,
+  getScheduleForStaffController,
 } from "./schedule.controller.js";
 
 import {
@@ -68,6 +74,15 @@ import {
   getItemByChildIdController,
 } from "./item.controller.js";
 
+import {
+  saveAssignStaffController,
+  updateAssignStaffController,
+  deleteAssignStaffController,
+  getAllAssignedStaffController,
+  getPendingAssignedStaffController,
+  getAssignedKidsForStaffController,
+} from "./assignStaff.controller.js";
+
 export {
   saveMedicineController,
   updateMedicineController,
@@ -94,6 +109,12 @@ export {
   deleteScheduleController,
   getSchedulesController,
   getAllChildsController,
+  saveAssignStaffController,
+  updateAssignStaffController,
+  deleteAssignStaffController,
+  getAllAssignedStaffController,
+  getPendingAssignedStaffController,
+  getChildstempController,
   savePaymentController,
   getPaymentController,
   getPaymentByIdController,
@@ -112,5 +133,11 @@ export {
   updateItemController,
   deleteItemController,
   getItemByChildIdController,
+  getStaffController,
+  getSingleChildController,
+  getMedicinesForStaffController,
+  getAssignedKidsForStaffController,
+  getScheduleForStaffController,
+  getMedicinesForParentController,
 };
 export * from "./user.controller.js";

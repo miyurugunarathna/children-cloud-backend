@@ -8,7 +8,6 @@ import { Attendance } from "./attendance.model.js";
 import { Child } from "./child.model.js";
 import { Schedule } from "./schedule.model.js";
 import { AssignStaff } from "./assignStaff.model.js";
-
 import { Payment } from "./payment.model.js";
 import { Bill } from "./bill.model.js";
 import { Item } from "./item.model.js";

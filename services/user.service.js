@@ -22,7 +22,14 @@ export const save = async (data) => {
       const hash = await bcrypt.hash(password, salt);
       password = hash;
     }
-    await saveUser({ firstName, lastName, email, userName, password, role });
+    await saveUser({
+      firstName,
+      lastName,
+      email,
+      userName,
+      password,
+      role,
+    });
     return Promise.resolve("Successfully registered.");
   } catch (err) {
     throw new AppError(err.message, err.status);
