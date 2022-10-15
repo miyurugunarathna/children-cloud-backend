@@ -2,27 +2,25 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const attSchema = new Schema(
-  {
-    EmpID: {
-      type: String,
-      required: true,
-    },
-
-    INtime: {
-      type: String,
-      required: true,
-    },
-    OUTtime: {
-      type: String,
-      required: true,
-    },
-    TotalHrs: {
-      type: Number,
-      required: true,
-    },
+const attSchema = new Schema({
+  EmpID: {
+    type: String,
+    required: true,
   },
-  { timestamps: true, versionKey: false },
-);
+
+  Status: {
+    type: String,
+    required: true,
+  },
+  Reason: {
+    type: String,
+    required: true,
+  },
+  Message: {
+    type: String,
+    required: true,
+  },
+  time: { type: Date, default: Date.now },
+});
 
 export const Attendance = mongoose.model("Attendance", attSchema);
