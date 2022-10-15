@@ -76,6 +76,9 @@ export const view = async (user) => {
       userName: user?.userName,
       email: user?.email,
       role: user?.role,
+      mobile: user?.mobile,
+      address: user?.address,
+      url: user?.url,
     });
   } catch (err) {
     throw new AppError(err.message, err.status);
