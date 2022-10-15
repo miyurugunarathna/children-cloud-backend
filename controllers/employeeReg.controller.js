@@ -46,7 +46,7 @@ export const getEmployeeController = async (req, res) => {
 
 export const getAllEmployeeController = async (req, res) => {
   try {
-    const employee = await getAllEmployeeService();
+    const employee = await getAllEmployeeService(req.body.filter);
     res.json(Success(employee, "Successfully get Employees Details"));
   } catch (err) {
     res.status(err.status).json(err.message);

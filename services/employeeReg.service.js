@@ -65,9 +65,9 @@ export const getEmployeesService = async (id) => {
   }
 };
 
-export const getAllEmployeeService = async () => {
+export const getAllEmployeeService = async (data = null) => {
   try {
-    const employee = await getAllEmployee();
+    const employee = await getAllEmployee(data);
     return Promise.resolve(employee);
   } catch (err) {
     throw new AppError(err.message, err.status);
