@@ -10,7 +10,15 @@ import {
 import AppError from "../utils/appError.js";
 
 export const savePaymentInqService = async (data) => {
-  const { childId, paymentId, billId, type, contactNumber, emailAddress, description } = data;
+  const {
+    childId,
+    paymentId,
+    billId,
+    type,
+    contactNumber,
+    emailAddress,
+    description,
+  } = data;
   try {
     const paymentInq = await savePaymentInq({
       childId,
@@ -62,7 +70,6 @@ export const getPaymentInqByPaymentIdService = async (id) => {
     throw new AppError(err.message, err.status);
   }
 };
-
 
 export const updatePaymentInqService = async (id, data) => {
   try {

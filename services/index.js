@@ -97,7 +97,7 @@ import {
   deletePaymentInqService,
   getPaymentInqByBillIdService,
   getPaymentInqByPaymentIdService,
-} from "./paymentInquery.service";
+} from "./paymentInquery.service.js";
 
 export {
   saveMedicineService,

@@ -94,8 +94,7 @@ import {
   getPaymentInqByPaymentId,
   updatePaymentInq,
   deletePaymentInq,
-} from "./paymentInquery.repository"
-
+} from "./paymentInquery.repository.js";
 
 import {
   saveBabySitter,

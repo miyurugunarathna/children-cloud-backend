@@ -12,7 +12,6 @@ import { Item } from "./item.model.js";
 import { PaymentInq } from "./paymentInquery.model.js";
 import { BabySitter } from "./childAllocate.model.js";
 
-
 export {
   User,
   Event,

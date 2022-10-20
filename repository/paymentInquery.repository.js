@@ -2,9 +2,9 @@ import { PaymentInq } from "../models/index.js";
 import AppError from "../utils/appError.js";
 
 export const savePaymentInq = (data) =>
-PaymentInqInq.create(data)
-    .then((PaymentInqInq) => {
-      return Promise.resolve(PaymentInqInq);
+  PaymentInq.create(data)
+    .then((paymentInq) => {
+      return Promise.resolve(paymentInq);
     })
     .catch((err) => {
       throw new AppError(`Internal Server Error: ${err}`, 500);

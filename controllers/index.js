@@ -99,7 +99,7 @@ import {
   deletePaymentInqController,
   getPaymentInqByBillIdController,
   getPaymentInqByPaymentIdController,
-} from "./paymentInq.controller";
+} from "./paymentInq.controller.js";
 
 export {
   saveMedicineController,
