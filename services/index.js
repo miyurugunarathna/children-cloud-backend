@@ -89,6 +89,16 @@ import {
   getBabySitterService,
 } from "./childAllocate.service.js";
 
+import {
+  savePaymentInqService,
+  getPaymentInqByIdService,
+  getPaymentInqService,
+  updatePaymentInqService,
+  deletePaymentInqService,
+  getPaymentInqByBillIdService,
+  getPaymentInqByPaymentIdService,
+} from "./paymentInquery.service";
+
 export {
   saveMedicineService,
   updateMedicineService,
@@ -149,5 +159,12 @@ export {
   getAssignedKidsForStaffService,
   getSchedulesForStaffService,
   getMedicineForParentService,
+  savePaymentInqService,
+  getPaymentInqByIdService,
+  getPaymentInqService,
+  updatePaymentInqService,
+  deletePaymentInqService,
+  getPaymentInqByBillIdService,
+  getPaymentInqByPaymentIdService,
 };
 export * from "./user.service.js";
