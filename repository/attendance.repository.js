@@ -6,8 +6,7 @@ export const saveAttendance = (data) =>
     .then((attendance) => {
       return Promise.resolve(attendance);
     })
-    .catch((e) => {
-      console.log(e);
+    .catch(() => {
       throw new AppError("Internal server error", 500);
     });
 
