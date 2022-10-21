@@ -19,6 +19,7 @@ import {
   saveAttendanceController,
   getAllAttendanceController,
   getAttendanceController,
+  updateAttenanceController,
 } from "./attendance.controller.js";
 
 import {
@@ -169,6 +170,7 @@ export {
   deletePaymentInqController,
   getPaymentInqByBillIdController,
   getPaymentInqByPaymentIdController,
+  updateAttenanceController,
 };
 
 export * from "./user.controller.js";

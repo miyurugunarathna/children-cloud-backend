@@ -27,3 +27,15 @@ export const getAllAttendance = (data) =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const updateAttendance = (id) =>
+  Attendance.findByIdAndUpdate(id, { Approved: "Approved" }, { new: true })
+    .then((attendance) => {
+      if (!attendance) {
+        throw new AppError("Attendance Not Found", 404);
+      }
+      return Promise.resolve(attendance);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
