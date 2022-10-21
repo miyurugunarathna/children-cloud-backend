@@ -108,9 +108,7 @@ import {
   saveSalaryGroup,
   getSalaryGroup,
   getSalaryGroupById,
-  getSalaryGroupByBillId,
-  getSalaryGroupByPaymentId,
-  getSalaryGroupByChildId,
+  getSalaryGroupByStaffId,
   updateSalaryGroup,
   deleteSalaryGroup,
 } from "./salaryGroup.repository.js";
@@ -191,9 +189,7 @@ export {
   saveSalaryGroup,
   getSalaryGroup,
   getSalaryGroupById,
-  getSalaryGroupByBillId,
-  getSalaryGroupByPaymentId,
-  getSalaryGroupByChildId,
+  getSalaryGroupByStaffId,
   updateSalaryGroup,
   deleteSalaryGroup,
 };

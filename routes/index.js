@@ -14,6 +14,7 @@ import billRouter from "./bill.route.js";
 import itemRouter from "./item.route.js";
 import BabySitterRouter from "./childAllocate.route.js";
 import paymentInqRouter from "./paymentInquery.route.js";
+import salaryGroupRouter from "./salaryGroup.route.js";
 
 const apiRouter = express.Router();
 
@@ -30,5 +31,6 @@ apiRouter.use("/bill", billRouter);
 apiRouter.use("/item", itemRouter);
 apiRouter.use("/babySitter", BabySitterRouter);
 apiRouter.use("/paymentInq", paymentInqRouter);
+apiRouter.use("/salaryGroup", salaryGroupRouter);
 
 export default apiRouter;

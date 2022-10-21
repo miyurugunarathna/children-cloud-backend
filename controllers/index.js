@@ -101,6 +101,15 @@ import {
   getPaymentInqByPaymentIdController,
 } from "./paymentInq.controller.js";
 
+import {
+  saveSalaryGroupController,
+  getSalaryGroupController,
+  getSalaryGroupByIdController,
+  getSalaryGroupByStaffIdController,
+  updateSalaryGroupController,
+  deleteSalaryGroupController,
+} from "./salaryGroup.controller.js";
+
 export {
   saveMedicineController,
   updateMedicineController,
@@ -169,6 +178,12 @@ export {
   deletePaymentInqController,
   getPaymentInqByBillIdController,
   getPaymentInqByPaymentIdController,
+  saveSalaryGroupController,
+  getSalaryGroupController,
+  getSalaryGroupByIdController,
+  getSalaryGroupByStaffIdController,
+  updateSalaryGroupController,
+  deleteSalaryGroupController,
 };
 
 export * from "./user.controller.js";

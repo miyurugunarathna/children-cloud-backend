@@ -31,32 +31,8 @@ export const getSalaryGroupById = (id) =>
       throw new AppError(`Internal Server Error: ${err}`, 500);
     });
 
-export const getSalaryGroupByBillId = (id) =>
-  SalaryGroup.find({ billId: id })
-    .then((salaryGroup) => {
-      if (!salaryGroup) {
-        throw new AppError("SalaryGroup Details not Found", 404);
-      }
-      return Promise.resolve(salaryGroup);
-    })
-    .catch((err) => {
-      throw new AppError(`Internal Server Error: ${err}`, 500);
-    });
-
-export const getSalaryGroupByPaymentId = (id) =>
-  SalaryGroup.find({ paymentId: id })
-    .then((salaryGroup) => {
-      if (!salaryGroup) {
-        throw new AppError("SalaryGroup Details not Found", 404);
-      }
-      return Promise.resolve(salaryGroup);
-    })
-    .catch((err) => {
-      throw new AppError(`Internal Server Error: ${err}`, 500);
-    });
-
-export const getSalaryGroupByChildId = (id) =>
-  SalaryGroup.find({ childId: id })
+export const getSalaryGroupByStaffId = (id) =>
+  SalaryGroup.find({ staffId: id })
     .then((salaryGroup) => {
       if (!salaryGroup) {
         throw new AppError("SalaryGroup Details not Found", 404);

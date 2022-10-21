@@ -99,6 +99,15 @@ import {
   getPaymentInqByPaymentIdService,
 } from "./paymentInquery.service.js";
 
+import {
+  saveSalaryGroupService,
+  getSalaryGroupService,
+  getSalaryGroupByIdService,
+  getSalaryGroupByStaffIdService,
+  updateSalaryGroupService,
+  deleteSalaryGroupService,
+} from "./salaryGroup.service.js";
+
 export {
   saveMedicineService,
   updateMedicineService,
@@ -166,5 +175,11 @@ export {
   deletePaymentInqService,
   getPaymentInqByBillIdService,
   getPaymentInqByPaymentIdService,
+  saveSalaryGroupService,
+  getSalaryGroupService,
+  getSalaryGroupByIdService,
+  getSalaryGroupByStaffIdService,
+  updateSalaryGroupService,
+  deleteSalaryGroupService,
 };
 export * from "./user.service.js";
