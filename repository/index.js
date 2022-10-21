@@ -57,6 +57,7 @@ import {
   saveAttendance,
   getAttendance,
   getAllAttendance,
+  updateAttendance,
 } from "./attendance.repository.js";
 
 import {
@@ -160,5 +161,6 @@ export {
   getAssignedKidsForStaff,
   getScheduleForStaff,
   getMedicinesForParents,
+  updateAttendance,
 };
 export * from "./user.repository.js";

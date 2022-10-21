@@ -7,7 +7,7 @@ import {
 import AppError from "../utils/appError.js";
 
 export const saveAttendanceService = async (data) => {
-  const { EmpID, Status, Reason, Message } = data;
+  const { EmpID, Status, Reason = "", Message = "" } = data;
   try {
     const attendance = await saveAttendance({
       EmpID,

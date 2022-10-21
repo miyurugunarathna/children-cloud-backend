@@ -6,7 +6,8 @@ export const saveAttendance = (data) =>
     .then((attendance) => {
       return Promise.resolve(attendance);
     })
-    .catch(() => {
+    .catch((e) => {
+      console.log(e);
       throw new AppError("Internal server error", 500);
     });
 
@@ -22,6 +23,18 @@ export const getAttendance = (id) =>
 export const getAllAttendance = (data) =>
   Attendance.find(data)
     .then((attendance) => {
+      return Promise.resolve(attendance);
+    })
+    .catch(() => {
+      throw new AppError("Internal server error.", 500);
+    });
+
+export const updateAttendance = (id) =>
+  Attendance.findByIdAndUpdate(id, { Approved: "Approved" }, { new: true })
+    .then((attendance) => {
+      if (!attendance) {
+        throw new AppError("Attendance Not Found", 404);
+      }
       return Promise.resolve(attendance);
     })
     .catch(() => {
