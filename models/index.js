@@ -11,6 +11,7 @@ import { Bill } from "./bill.model.js";
 import { Item } from "./item.model.js";
 import { PaymentInq } from "./paymentInquery.model.js";
 import { BabySitter } from "./childAllocate.model.js";
+import { SalaryGroup } from "./salaryGroup.model.js";
 
 export {
   User,
@@ -26,4 +27,5 @@ export {
   Schedule,
   AssignStaff,
   BabySitter,
+  SalaryGroup,
 };

@@ -104,6 +104,17 @@ import {
   getBabySitter,
 } from "./childAllocate.repository.js";
 
+import {
+  saveSalaryGroup,
+  getSalaryGroup,
+  getSalaryGroupById,
+  getSalaryGroupByBillId,
+  getSalaryGroupByPaymentId,
+  getSalaryGroupByChildId,
+  updateSalaryGroup,
+  deleteSalaryGroup,
+} from "./salaryGroup.repository.js";
+
 export {
   saveMedicine,
   updateMedicine,
@@ -177,5 +188,13 @@ export {
   getPaymentInqByPaymentId,
   updatePaymentInq,
   deletePaymentInq,
+  saveSalaryGroup,
+  getSalaryGroup,
+  getSalaryGroupById,
+  getSalaryGroupByBillId,
+  getSalaryGroupByPaymentId,
+  getSalaryGroupByChildId,
+  updateSalaryGroup,
+  deleteSalaryGroup,
 };
 export * from "./user.repository.js";
