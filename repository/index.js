@@ -57,6 +57,7 @@ import {
   saveAttendance,
   getAttendance,
   getAllAttendance,
+  updateAttendance,
 } from "./attendance.repository.js";
 
 import {
@@ -177,5 +178,6 @@ export {
   getPaymentInqByPaymentId,
   updatePaymentInq,
   deletePaymentInq,
+  updateAttendance,
 };
 export * from "./user.repository.js";

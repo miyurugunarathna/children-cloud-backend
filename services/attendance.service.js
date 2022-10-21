@@ -2,6 +2,7 @@ import {
   saveAttendance,
   getAllAttendance,
   getAttendance,
+  updateAttendance,
 } from "../repository/index.js";
 
 import AppError from "../utils/appError.js";
@@ -33,6 +34,15 @@ export const getAttendanceService = async (id) => {
 export const getAllAttendanceService = async () => {
   try {
     const attendance = await getAllAttendance();
+    return Promise.resolve(attendance);
+  } catch (err) {
+    throw new AppError(err.message, err.status);
+  }
+};
+
+export const updateAttendanceService = async (id) => {
+  try {
+    const attendance = await updateAttendance(id);
     return Promise.resolve(attendance);
   } catch (err) {
     throw new AppError(err.message, err.status);

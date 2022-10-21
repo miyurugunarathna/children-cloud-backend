@@ -52,6 +52,7 @@ import {
   saveAttendanceService,
   getAllAttendanceService,
   getAttendanceService,
+  updateAttendanceService,
 } from "./attendance.service.js";
 
 import {
@@ -166,5 +167,6 @@ export {
   deletePaymentInqService,
   getPaymentInqByBillIdService,
   getPaymentInqByPaymentIdService,
+  updateAttendanceService,
 };
 export * from "./user.service.js";

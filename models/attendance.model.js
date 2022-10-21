@@ -20,6 +20,10 @@ const attSchema = new Schema({
     type: String,
     required: true,
   },
+  Approved: {
+    type: String,
+    default: "Pending",
+  },
   time: { type: Date, default: Date.now },
 });
 
