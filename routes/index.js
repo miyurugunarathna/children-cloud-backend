@@ -13,15 +13,14 @@ import paymentRoute from "./payment.route.js";
 import billRouter from "./bill.route.js";
 import itemRouter from "./item.route.js";
 import BabySitterRouter from "./childAllocate.route.js";
+import paymentInqRouter from "./paymentInquery.route.js";
 
 const apiRouter = express.Router();
 
 apiRouter.use("/user", userRouter);
 apiRouter.use("/medicine", medicineRouter);
-
 apiRouter.use("/employee", employeeRouter);
 apiRouter.use("/attendance", AttendanceRoute);
-
 apiRouter.use("/events", eventRouter);
 apiRouter.use("/schedule", scheduleRouter);
 apiRouter.use("/child", childRouter);
@@ -30,5 +29,6 @@ apiRouter.use("/payment", paymentRoute);
 apiRouter.use("/bill", billRouter);
 apiRouter.use("/item", itemRouter);
 apiRouter.use("/babySitter", BabySitterRouter);
+apiRouter.use("/paymentInq", paymentInqRouter);
 
 export default apiRouter;

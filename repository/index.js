@@ -87,6 +87,16 @@ import {
 } from "./item.repository.js";
 
 import {
+  savePaymentInq,
+  getPaymentInq,
+  getPaymentInqById,
+  getPaymentInqByBillId,
+  getPaymentInqByPaymentId,
+  updatePaymentInq,
+  deletePaymentInq,
+} from "./paymentInquery.repository.js";
+
+import {
   saveBabySitter,
   deleteBabySitter,
   updateBabySitter,
@@ -160,5 +170,12 @@ export {
   getAssignedKidsForStaff,
   getScheduleForStaff,
   getMedicinesForParents,
+  savePaymentInq,
+  getPaymentInq,
+  getPaymentInqById,
+  getPaymentInqByBillId,
+  getPaymentInqByPaymentId,
+  updatePaymentInq,
+  deletePaymentInq,
 };
 export * from "./user.repository.js";

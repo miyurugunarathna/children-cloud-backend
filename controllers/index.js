@@ -91,6 +91,16 @@ import {
   getAssignedKidsForStaffController,
 } from "./assignStaff.controller.js";
 
+import {
+  savePaymentInqController,
+  getPaymentInqController,
+  getPaymentInqByIdController,
+  updatePaymentInqController,
+  deletePaymentInqController,
+  getPaymentInqByBillIdController,
+  getPaymentInqByPaymentIdController,
+} from "./paymentInq.controller.js";
+
 export {
   saveMedicineController,
   updateMedicineController,
@@ -152,6 +162,13 @@ export {
   getAssignedKidsForStaffController,
   getScheduleForStaffController,
   getMedicinesForParentController,
+  savePaymentInqController,
+  getPaymentInqController,
+  getPaymentInqByIdController,
+  updatePaymentInqController,
+  deletePaymentInqController,
+  getPaymentInqByBillIdController,
+  getPaymentInqByPaymentIdController,
 };
 
 export * from "./user.controller.js";
