@@ -6,13 +6,12 @@ import {
   getAttendanceController,
   updateAttenanceController,
 } from "../controllers/index.js";
-import { authenticate } from "../middleware/auth.middleware.js";
 
 const AttendanceRoute = Express.Router();
 
 AttendanceRoute.post("/save", saveAttendanceController);
 AttendanceRoute.get("/:Date", getAttendanceController);
 AttendanceRoute.get("/", getAllAttendanceController);
-AttendanceRoute.put("/status", authenticate, updateAttenanceController);
+AttendanceRoute.put("/status/:id", updateAttenanceController);
 
 export default AttendanceRoute;

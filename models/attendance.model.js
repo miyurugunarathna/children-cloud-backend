@@ -7,18 +7,17 @@ const attSchema = new Schema({
     type: String,
     required: true,
   },
-
   Status: {
     type: String,
     required: true,
   },
   Reason: {
     type: String,
-    required: true,
+    required: false,
   },
   Message: {
     type: String,
-    required: true,
+    required: false,
   },
   Approved: {
     type: String,

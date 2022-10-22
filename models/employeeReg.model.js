@@ -8,7 +8,6 @@ const empSchema = new Schema(
       type: String,
       required: true,
     },
-
     fullName: {
       type: String,
       required: true,
@@ -36,7 +35,6 @@ const empSchema = new Schema(
     image: {
       type: String,
       required: false,
-      data: Buffer,
     },
     type: {
       type: String,
