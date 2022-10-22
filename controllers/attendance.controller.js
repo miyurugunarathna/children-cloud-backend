@@ -3,6 +3,7 @@ import {
   getAllAttendance,
   getAttendance,
 } from "../repository/index.js";
+import { updateAttendanceService } from "../services/index.js";
 
 import Success from "../utils/success.js";
 
@@ -29,6 +30,16 @@ export const getAllAttendanceController = async (req, res) => {
   try {
     const attendance = await getAllAttendance();
     res.json(Success(attendance, "Successfully get Attendance Details"));
+  } catch (err) {
+    res.status(err.status).json(err.message);
+  }
+};
+
+export const updateAttenanceController = async (req, res) => {
+  try {
+    const staffID = req.params.id;
+    const attendance = await updateAttendanceService(staffID);
+    res.json(Success(attendance, "Successfully Update Attendance Details"));
   } catch (err) {
     res.status(err.status).json(err.message);
   }
